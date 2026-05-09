@@ -1283,6 +1283,1436 @@ a {
   grid-template-columns: 140px minmax(0, 1fr);
 }
 
+.home-reference-body {
+  --reference-bg: #f6f1e8;
+  --reference-surface: rgba(255, 252, 247, 0.74);
+  --reference-surface-strong: rgba(255, 250, 243, 0.9);
+  --reference-text: #1f2530;
+  --reference-muted: #5d6676;
+  --reference-border: rgba(31, 37, 48, 0.14);
+  --reference-accent: #965f34;
+  color: var(--reference-text);
+  background:
+    radial-gradient(circle at top left, rgba(150, 95, 52, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(72, 112, 170, 0.12), transparent 26%),
+    linear-gradient(180deg, #faf6ee 0%, #efe7dc 100%);
+  overflow-x: clip;
+}
+
+.home-reference-body[data-theme='dark'] {
+  --reference-bg: #11161f;
+  --reference-surface: rgba(18, 23, 33, 0.84);
+  --reference-surface-strong: rgba(26, 33, 47, 0.94);
+  --reference-text: #edf2f8;
+  --reference-muted: #a6b1c2;
+  --reference-border: rgba(201, 214, 234, 0.16);
+  --reference-accent: #d79a66;
+  background:
+    radial-gradient(circle at top left, rgba(215, 154, 102, 0.14), transparent 24%),
+    radial-gradient(circle at top right, rgba(112, 155, 224, 0.16), transparent 28%),
+    linear-gradient(180deg, #091018 0%, #131a24 100%);
+}
+
+.reference-shell {
+  width: calc(100% - clamp(28px, 5vw, 72px));
+  margin: 0 auto;
+  padding: 48px 0 88px;
+}
+
+.reference-panel {
+  position: relative;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  --reference-panel-fill: transparent;
+  --reference-panel-wash: transparent;
+  --reference-panel-glow: transparent;
+  --reference-row-wash: transparent;
+  --reference-stamp-bg: transparent;
+  --reference-stamp-border: transparent;
+}
+
+.reference-panel--hero {
+  --reference-accent: #965f34;
+  --reference-panel-fill: rgba(150, 95, 52, 0.07);
+}
+
+.reference-panel--timeline {
+  --reference-accent: #8a5a2d;
+  --reference-panel-fill: rgba(138, 90, 45, 0.075);
+  --reference-row-wash: rgba(138, 90, 45, 0.045);
+}
+
+.reference-panel--bio {
+  --reference-accent: #476f95;
+  --reference-panel-fill: rgba(71, 111, 149, 0.085);
+  --reference-row-wash: rgba(71, 111, 149, 0.05);
+}
+
+.reference-panel--projects {
+  --reference-accent: #9a5858;
+  --reference-panel-fill: rgba(154, 88, 88, 0.075);
+  --reference-row-wash: rgba(154, 88, 88, 0.04);
+}
+
+.reference-panel--papers {
+  --reference-accent: #5d7750;
+  --reference-panel-fill: rgba(93, 119, 80, 0.075);
+  --reference-row-wash: rgba(93, 119, 80, 0.04);
+}
+
+.reference-panel--patents {
+  --reference-accent: #6f5f9f;
+  --reference-panel-fill: rgba(111, 95, 159, 0.09);
+  --reference-row-wash: rgba(111, 95, 159, 0.055);
+  --reference-stamp-bg: rgba(111, 95, 159, 0.12);
+  --reference-stamp-border: rgba(111, 95, 159, 0.22);
+}
+
+.reference-panel--service {
+  --reference-accent: #4d7286;
+  --reference-panel-fill: rgba(77, 114, 134, 0.09);
+  --reference-row-wash: rgba(77, 114, 134, 0.055);
+  --reference-stamp-bg: rgba(77, 114, 134, 0.12);
+  --reference-stamp-border: rgba(77, 114, 134, 0.2);
+}
+
+.reference-panel--awards {
+  --reference-accent: #8b6a1d;
+  --reference-panel-fill: rgba(139, 106, 29, 0.09);
+  --reference-row-wash: rgba(139, 106, 29, 0.06);
+  --reference-stamp-bg: rgba(139, 106, 29, 0.1);
+  --reference-stamp-border: rgba(139, 106, 29, 0.18);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--hero {
+  --reference-accent: #d79a66;
+  --reference-panel-fill: rgba(215, 154, 102, 0.09);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--timeline {
+  --reference-accent: #d0a169;
+  --reference-panel-fill: rgba(208, 161, 105, 0.1);
+  --reference-row-wash: rgba(208, 161, 105, 0.06);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--bio {
+  --reference-accent: #88b2ff;
+  --reference-panel-fill: rgba(136, 178, 255, 0.1);
+  --reference-row-wash: rgba(136, 178, 255, 0.06);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--projects {
+  --reference-accent: #d98989;
+  --reference-panel-fill: rgba(217, 137, 137, 0.09);
+  --reference-row-wash: rgba(217, 137, 137, 0.05);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--papers {
+  --reference-accent: #97c485;
+  --reference-panel-fill: rgba(151, 196, 133, 0.09);
+  --reference-row-wash: rgba(151, 196, 133, 0.05);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--patents {
+  --reference-accent: #b7a7ef;
+  --reference-panel-fill: rgba(183, 167, 239, 0.11);
+  --reference-row-wash: rgba(183, 167, 239, 0.065);
+  --reference-stamp-bg: rgba(183, 167, 239, 0.14);
+  --reference-stamp-border: rgba(183, 167, 239, 0.24);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--service {
+  --reference-accent: #8dc1d7;
+  --reference-panel-fill: rgba(141, 193, 215, 0.11);
+  --reference-row-wash: rgba(141, 193, 215, 0.07);
+  --reference-stamp-bg: rgba(141, 193, 215, 0.14);
+  --reference-stamp-border: rgba(141, 193, 215, 0.24);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--awards {
+  --reference-accent: #e0b96d;
+  --reference-panel-fill: rgba(224, 185, 109, 0.11);
+  --reference-row-wash: rgba(224, 185, 109, 0.07);
+  --reference-stamp-bg: rgba(224, 185, 109, 0.14);
+  --reference-stamp-border: rgba(224, 185, 109, 0.22);
+}
+
+.reference-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  isolation: isolate;
+}
+
+.reference-hero::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  bottom: -22px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: var(--reference-panel-fill);
+  z-index: -1;
+}
+
+.reference-intro {
+  position: relative;
+  padding-right: 104px;
+}
+
+.reference-utility {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reference-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.reference-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.reference-intro h1,
+.reference-entry h3 {
+  margin: 0;
+  font-family: 'Literata', serif;
+  color: var(--reference-text);
+}
+
+.reference-intro h1 {
+  font-size: clamp(2.8rem, 6vw, 4.3rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+}
+
+.reference-intro h2 {
+  margin: 12px 0 0;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--reference-muted);
+}
+
+.reference-intro p,
+.reference-entry p,
+.reference-prose p,
+.reference-fact p,
+.reference-subline,
+.reference-bullets {
+  color: var(--reference-muted);
+  line-height: 1.78;
+}
+
+.reference-affiliation,
+.reference-hero-note {
+  margin: 10px 0 0;
+}
+
+.reference-affiliation {
+  font-weight: 700;
+  color: var(--reference-text);
+}
+
+.reference-hero-note {
+  color: var(--reference-muted);
+}
+
+.reference-label {
+  margin: 0 0 16px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--reference-accent);
+}
+
+.reference-links,
+.reference-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reference-links {
+  margin-top: 16px;
+  align-items: center;
+}
+
+.reference-mini-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 30px;
+  padding: 0 9px;
+  border-radius: 999px;
+  border: 1px solid var(--reference-border);
+  background: transparent;
+  color: var(--reference-text);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.reference-mini-toggle:hover {
+  transform: translateY(-1px);
+  border-color: rgba(150, 95, 52, 0.42);
+  color: var(--reference-accent);
+}
+
+.reference-mini-toggle--theme {
+  min-width: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+.reference-theme-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.reference-theme-icon--moon,
+.home-reference-body[data-theme='dark'] .reference-theme-icon--sun {
+  display: none;
+}
+
+.home-reference-body[data-theme='dark'] .reference-theme-icon--moon {
+  display: block;
+}
+
+.reference-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--reference-text);
+  background: transparent;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.reference-icon-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.reference-links .theme-switch {
+  min-height: 34px;
+  min-width: 58px;
+  padding: 0 12px;
+  background: transparent;
+  color: var(--reference-text);
+  border-color: var(--reference-border);
+  box-shadow: none;
+}
+
+.reference-icon-link:hover,
+.reference-inline-links a:hover,
+.reference-text-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(150, 95, 52, 0.42);
+  color: var(--reference-accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.reference-fact span,
+.reference-stamp {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reference-fact span {
+  margin-bottom: 8px;
+  color: var(--reference-accent);
+}
+
+.reference-fact p,
+.reference-subline {
+  margin: 0;
+}
+
+.reference-section {
+  margin-top: 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--reference-border);
+}
+
+.reference-section.reference-panel {
+  padding-top: 22px;
+  border-top: none;
+  isolation: isolate;
+}
+
+.reference-section.reference-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: color-mix(in srgb, var(--reference-accent) 28%, var(--reference-border));
+}
+
+.reference-section.reference-panel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: var(--reference-panel-fill);
+  z-index: -1;
+}
+
+.reference-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.reference-text-link {
+  min-height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  color: var(--reference-accent);
+  font-weight: 600;
+}
+
+.reference-timeline,
+.reference-list {
+  display: grid;
+  gap: 0;
+}
+
+.reference-timeline--dense article {
+  grid-template-columns: 116px minmax(0, 1fr);
+}
+
+.reference-timeline--dense::before {
+  left: 110px;
+}
+
+.reference-timeline--dense article::before {
+  left: 106px;
+}
+
+.reference-timeline article,
+.reference-list article {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.reference-item-link {
+  margin-top: 2px;
+  padding: 4px 10px;
+  border: 1px solid color-mix(in srgb, var(--reference-accent) 22%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--reference-accent) 8%, transparent);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  align-self: start;
+}
+
+.reference-item-link:hover,
+.reference-item-link:focus-visible {
+  border-color: color-mix(in srgb, var(--reference-accent) 42%, transparent);
+  background: color-mix(in srgb, var(--reference-accent) 14%, transparent);
+}
+
+.reference-timeline {
+  position: relative;
+  gap: 0;
+}
+
+.reference-timeline::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 122px;
+  width: 1px;
+  background: var(--reference-border);
+}
+
+.reference-timeline article {
+  position: relative;
+  padding: 12px 0;
+  border: none;
+  background: linear-gradient(90deg, var(--reference-row-wash), transparent 82%);
+  box-shadow: none;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.reference-timeline article::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 118px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--reference-bg);
+  border: 1.5px solid var(--reference-accent);
+}
+
+.reference-timeline article + article {
+  border-top: 1px solid var(--reference-border);
+}
+
+.reference-stamp {
+  color: var(--reference-accent);
+  position: relative;
+  z-index: 1;
+}
+
+.reference-entry h3 {
+  font-size: 1.22rem;
+  line-height: 1.32;
+}
+
+.reference-entry-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 14px;
+  row-gap: 6px;
+}
+
+.reference-entry-head h3 {
+  min-width: 0;
+}
+
+.reference-entry p {
+  margin: 10px 0 0;
+}
+
+.reference-inline-links {
+  margin-top: 10px;
+}
+
+.reference-inline-links a,
+.reference-text-link {
+  margin-top: 2px;
+  padding: 3px 10px;
+  min-height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--reference-accent);
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 0;
+}
+
+.reference-list article {
+  padding: 16px 0;
+  border: none;
+  border-top: 1px solid var(--reference-border);
+  background: linear-gradient(90deg, var(--reference-row-wash), transparent 80%);
+  box-shadow: none;
+  gap: 18px;
+}
+
+.reference-list article:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.reference-project-list article {
+  grid-template-columns: 120px minmax(0, 1fr);
+}
+
+.reference-bio-list article {
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.reference-patent-list article {
+  grid-template-columns: 120px minmax(0, 1fr);
+}
+
+.reference-bio-list .reference-entry h3,
+.reference-timeline .reference-entry h3,
+.reference-patent-list .reference-entry h3 {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.reference-panel--hero .reference-photo {
+  box-shadow: 0 14px 32px rgba(150, 95, 52, 0.12);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--hero .reference-photo {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.reference-panel--timeline .reference-timeline::before {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--reference-accent) 42%, transparent), var(--reference-border));
+}
+
+.reference-panel--bio .reference-list article {
+  padding-left: 12px;
+  border-left: 2px solid color-mix(in srgb, var(--reference-accent) 30%, transparent);
+}
+
+.reference-panel--bio .reference-list article:first-child {
+  border-top: none;
+}
+
+.reference-panel--projects .reference-list article {
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--reference-accent) 12%, transparent), transparent 44%),
+    linear-gradient(90deg, var(--reference-row-wash), transparent 78%);
+}
+
+.reference-panel--papers .reference-list article {
+  background:
+    linear-gradient(90deg, var(--reference-row-wash), transparent 74%),
+    linear-gradient(180deg, color-mix(in srgb, var(--reference-accent) 8%, transparent), transparent 56%);
+}
+
+.reference-panel--service .reference-timeline::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--reference-accent) 42%, transparent) 0 8px,
+    transparent 8px 16px
+  );
+}
+
+.reference-panel--service .reference-timeline article::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.reference-panel--service .reference-stamp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--reference-stamp-border);
+  border-radius: 999px;
+  background: var(--reference-stamp-bg);
+  letter-spacing: 0.1em;
+}
+
+.reference-panel--patents .reference-list article {
+  background:
+    linear-gradient(90deg, var(--reference-row-wash), transparent 76%),
+    radial-gradient(circle at left center, color-mix(in srgb, var(--reference-accent) 12%, transparent), transparent 34%);
+}
+
+.reference-panel--patents .reference-stamp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--reference-stamp-border);
+  border-radius: 999px;
+  background: var(--reference-stamp-bg);
+  letter-spacing: 0.08em;
+}
+
+.reference-panel--awards .reference-timeline article {
+  background:
+    linear-gradient(90deg, var(--reference-row-wash), transparent 72%),
+    radial-gradient(circle at left center, color-mix(in srgb, var(--reference-accent) 14%, transparent), transparent 34%);
+}
+
+.reference-panel--awards .reference-timeline article::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.reference-panel--awards .reference-stamp {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 4px;
+  border-bottom: 1px solid var(--reference-stamp-border);
+}
+
+.reference-publication-list {
+  margin-top: 8px;
+}
+
+.reference-publication-list article {
+  grid-template-columns: 90px minmax(0, 1fr);
+}
+
+.reference-publication-list .reference-entry h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.reference-citation {
+  margin-top: 6px;
+  font-size: 0.98rem;
+}
+
+.reference-highlight {
+  margin: 8px 0 0;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--reference-accent);
+}
+
+.compact-inline-links {
+  margin-top: 10px;
+}
+
+.compact-inline-links a {
+  min-height: auto;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.reference-prose {
+  max-width: none;
+}
+
+.reference-prose p + p {
+  margin-top: 16px;
+}
+
+.reference-bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.reference-bullets li + li {
+  margin-top: 8px;
+}
+
+.reference-stack-section {
+  display: block;
+}
+
+.reference-subsection + .reference-subsection {
+  margin-top: 26px;
+}
+
+.compact-bullets {
+  margin-top: 0;
+}
+
+/* Minimal academic refinement: one visual language, fewer decorative gestures. */
+.home-reference-body {
+  --reference-bg: #ffffff;
+  --reference-surface: transparent;
+  --reference-surface-strong: transparent;
+  --reference-text: #1f2430;
+  --reference-muted: #5f6775;
+  --reference-border: rgba(31, 36, 48, 0.12);
+  --reference-accent: #3f587f;
+  background: #ffffff;
+}
+
+.home-reference-body[data-theme='dark'] {
+  --reference-bg: #000000;
+  --reference-surface: transparent;
+  --reference-surface-strong: transparent;
+  --reference-text: #edf1f6;
+  --reference-muted: #a8b1bf;
+  --reference-border: rgba(222, 230, 242, 0.16);
+  --reference-accent: #b4cbff;
+  background: #000000;
+}
+
+.reference-shell {
+  width: min(1080px, calc(100% - clamp(32px, 5vw, 72px)));
+  padding: 40px 0 72px;
+}
+
+.reference-panel--hero,
+.reference-panel--timeline,
+.reference-panel--bio,
+.reference-panel--projects,
+.reference-panel--papers,
+.reference-panel--service,
+.reference-panel--patents,
+.reference-panel--awards,
+.reference-panel--credentials {
+  --reference-accent: #3f587f;
+  --reference-panel-fill: transparent;
+  --reference-panel-rule: var(--reference-border);
+  --reference-row-wash: transparent;
+  --reference-stamp-bg: transparent;
+  --reference-stamp-border: transparent;
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--hero,
+.home-reference-body[data-theme='dark'] .reference-panel--timeline,
+.home-reference-body[data-theme='dark'] .reference-panel--bio,
+.home-reference-body[data-theme='dark'] .reference-panel--projects,
+.home-reference-body[data-theme='dark'] .reference-panel--papers,
+.home-reference-body[data-theme='dark'] .reference-panel--service,
+.home-reference-body[data-theme='dark'] .reference-panel--patents,
+.home-reference-body[data-theme='dark'] .reference-panel--awards,
+.home-reference-body[data-theme='dark'] .reference-panel--credentials {
+  --reference-accent: #b4cbff;
+  --reference-panel-fill: transparent;
+  --reference-panel-rule: var(--reference-border);
+  --reference-row-wash: transparent;
+  --reference-stamp-bg: transparent;
+  --reference-stamp-border: transparent;
+}
+
+.reference-panel--timeline,
+.reference-panel--projects,
+.reference-panel--service {
+  --reference-panel-fill: #eef2f7;
+  --reference-panel-rule: rgba(63, 88, 127, 0.18);
+}
+
+.home-reference-body[data-theme='dark'] .reference-panel--timeline,
+.home-reference-body[data-theme='dark'] .reference-panel--projects,
+.home-reference-body[data-theme='dark'] .reference-panel--service {
+  --reference-panel-fill: #18263c;
+  --reference-panel-rule: rgba(180, 203, 255, 0.22);
+}
+
+.reference-hero::after {
+  display: none;
+}
+
+.reference-section.reference-panel::after {
+  display: block;
+}
+
+.reference-section.reference-panel::before {
+  display: none;
+  left: 0;
+  width: 100%;
+  transform: none;
+  background: var(--reference-panel-rule, var(--reference-border));
+}
+
+.reference-timeline,
+.reference-list {
+  gap: 8px;
+}
+
+.reference-hero {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.reference-intro {
+  padding-right: 84px;
+}
+
+.reference-utility {
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+
+.reference-photo {
+  display: block;
+  border: 1px solid var(--reference-border);
+}
+
+.reference-panel--hero .reference-photo,
+.home-reference-body[data-theme='dark'] .reference-panel--hero .reference-photo {
+  box-shadow: none;
+}
+
+.reference-intro h1 {
+  font-size: clamp(2.55rem, 4.8vw, 3.55rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: color-mix(in srgb, var(--reference-accent) 62%, var(--reference-text));
+}
+
+.reference-intro h2 {
+  margin-top: 10px;
+  max-width: 40rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--reference-accent) 34%, var(--reference-text));
+}
+
+.reference-hero-note {
+  max-width: 40rem;
+  margin-top: 10px;
+  border-top: none;
+  line-height: 1.65;
+}
+
+.reference-affiliation {
+  max-width: 40rem;
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--reference-muted);
+}
+
+.reference-label {
+  margin-bottom: 12px;
+  color: color-mix(in srgb, var(--reference-accent) 76%, var(--reference-text));
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+html:lang(zh-CN) .home-reference-body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+html:lang(zh-CN) .reference-intro h1,
+html:lang(zh-CN) .reference-intro h2,
+html:lang(zh-CN) .reference-entry h3,
+html:lang(zh-CN) .reference-prose p,
+html:lang(zh-CN) .reference-citation,
+html:lang(zh-CN) .reference-highlight {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  letter-spacing: 0;
+}
+
+html:lang(zh-CN) .reference-intro h1 {
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+html:lang(zh-CN) .reference-intro h2 {
+  max-width: 34rem;
+  font-size: 1.18rem;
+  line-height: 1.68;
+}
+
+html:lang(zh-CN) .reference-hero-note {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+  font-size: 1.02rem;
+  line-height: 1.74;
+}
+
+html:lang(zh-CN) .reference-intro p,
+html:lang(zh-CN) .reference-entry p,
+html:lang(zh-CN) .reference-bullets,
+html:lang(zh-CN) .reference-subline,
+html:lang(zh-CN) .reference-label,
+html:lang(zh-CN) .reference-stamp,
+html:lang(zh-CN) .reference-inline-links a,
+html:lang(zh-CN) .reference-text-link,
+html:lang(zh-CN) .reference-affiliation {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  letter-spacing: 0;
+}
+
+html:lang(zh-CN) .reference-entry h3 {
+  line-height: 1.46;
+}
+
+html:lang(zh-CN) .reference-entry p,
+html:lang(zh-CN) .reference-subline,
+html:lang(zh-CN) .reference-bullets {
+  line-height: 1.82;
+}
+
+html:lang(zh-CN) .reference-prose p {
+  font-size: 1rem;
+  line-height: 1.92;
+}
+
+.reference-links {
+  margin-top: 14px;
+  gap: 14px;
+}
+
+.reference-icon-link {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: color-mix(in srgb, var(--reference-accent) 56%, var(--reference-text));
+}
+
+.reference-icon-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.reference-icon-link:hover,
+.reference-inline-links a:hover,
+.reference-text-link:hover {
+  transform: none;
+  border-color: transparent;
+}
+
+.reference-mini-toggle {
+  min-width: 30px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 0.69rem;
+  letter-spacing: 0.08em;
+}
+
+.reference-mini-toggle--theme {
+  width: 28px;
+  min-width: 28px;
+}
+
+.reference-section,
+.reference-section.reference-panel {
+  padding-top: 18px;
+}
+
+.reference-section-head {
+  gap: 10px;
+}
+
+.reference-text-link {
+  color: var(--reference-accent);
+  font-weight: 500;
+}
+
+.reference-timeline article,
+.reference-list article {
+  gap: 12px;
+  padding: 7px 0;
+  background: none !important;
+  box-shadow: none;
+}
+
+.reference-timeline article + article,
+.reference-list article + article {
+  border-top: none;
+}
+
+.reference-timeline::before,
+.reference-panel--timeline .reference-timeline::before,
+.reference-panel--service .reference-timeline::before {
+  left: 114px;
+  background: var(--reference-border) !important;
+}
+
+.reference-timeline article {
+  grid-template-columns: 124px minmax(0, 1fr);
+}
+
+.reference-panel--timeline .reference-timeline::before,
+.reference-panel--timeline .reference-timeline article::before {
+  display: none;
+}
+
+.reference-panel--timeline .reference-timeline article {
+  grid-template-columns: 118px 46px minmax(0, 1fr);
+  align-items: start;
+}
+
+.reference-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--reference-border);
+  border-radius: 10px;
+  background: color-mix(in srgb, white 88%, var(--reference-bg));
+}
+
+.home-reference-body[data-theme='dark'] .reference-mark {
+  background: color-mix(in srgb, white 10%, var(--reference-bg));
+}
+
+.reference-mark img {
+  display: block;
+  max-width: 32px;
+  max-height: 32px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.reference-timeline--dense article {
+  grid-template-columns: 108px minmax(0, 1fr);
+}
+
+.reference-timeline--dense article::before {
+  left: 98px;
+}
+
+.reference-timeline article::before,
+.reference-panel--service .reference-timeline article::before,
+.reference-panel--awards .reference-timeline article::before {
+  top: 18px;
+  left: 110px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: none;
+  background: var(--reference-bg);
+  border: 1px solid var(--reference-accent);
+}
+
+.reference-stamp {
+  min-height: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  color: var(--reference-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.reference-entry h3 {
+  font-size: 1rem;
+  line-height: 1.34;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--reference-accent) 24%, var(--reference-text));
+}
+
+.reference-entry p,
+.reference-bullets,
+.reference-citation {
+  font-size: 0.96rem;
+  line-height: 1.48;
+}
+
+.reference-entry p {
+  margin: 3px 0 0;
+}
+
+.reference-entry-head {
+  column-gap: 8px;
+}
+
+.reference-item-link,
+.reference-inline-links a,
+.reference-text-link {
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--reference-muted);
+}
+
+.reference-item-link:hover,
+.reference-item-link:focus-visible,
+.reference-inline-links a:hover,
+.reference-text-link:hover {
+  color: var(--reference-accent);
+}
+
+.reference-inline-links {
+  margin-top: 6px;
+  gap: 12px;
+}
+
+.reference-panel--bio .reference-prose {
+  max-width: 1040px;
+}
+
+.reference-panel--bio .reference-prose p {
+  font-size: 0.98rem;
+  line-height: 1.62;
+}
+
+.reference-panel--bio .reference-prose p + p {
+  margin-top: 12px;
+}
+
+.reference-panel--projects .reference-entry h3,
+.reference-panel--papers .reference-entry h3 {
+  color: color-mix(in srgb, var(--reference-accent) 38%, var(--reference-text));
+}
+
+.reference-panel--papers .reference-subline {
+  max-width: 1040px;
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  line-height: 1.58;
+}
+
+.reference-panel--papers .reference-publication-list {
+  margin-top: 4px;
+}
+
+.reference-panel--papers .reference-publication-list.reference-timeline::before {
+  left: 42px;
+  top: 10px;
+  bottom: 10px;
+  background: color-mix(in srgb, var(--reference-accent) 22%, var(--reference-border));
+}
+
+.reference-panel--papers .reference-publication-list article {
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.reference-panel--papers .reference-publication-list article::before {
+  left: 39px;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+}
+
+.reference-panel--papers .reference-entry h3 {
+  font-size: 0.97rem;
+  line-height: 1.32;
+}
+
+.reference-panel--papers .reference-stamp {
+  color: color-mix(in srgb, var(--reference-accent) 64%, var(--reference-muted));
+}
+
+.reference-panel--papers .reference-citation {
+  display: inline;
+  font-size: 0.9rem;
+  line-height: 1.46;
+}
+
+.reference-panel--papers .compact-inline-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 0 8px;
+  vertical-align: baseline;
+}
+
+.reference-panel--papers .compact-inline-links a {
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--reference-accent) 82%, var(--reference-muted));
+}
+
+.reference-panel--papers .reference-highlight {
+  margin-top: 3px;
+  color: color-mix(in srgb, var(--reference-accent) 78%, var(--reference-text));
+}
+
+.reference-credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.reference-mini-label {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--reference-accent) 72%, var(--reference-text));
+}
+
+.reference-panel--credentials .reference-subline {
+  margin: 0 0 6px;
+  max-width: none;
+  font-size: 0.82rem;
+  line-height: 1.36;
+}
+
+.reference-timeline--mini {
+  position: relative;
+  gap: 0;
+}
+
+.reference-timeline--mini::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 54px;
+  width: 1px;
+  background: color-mix(in srgb, var(--reference-accent) 24%, var(--reference-border));
+}
+
+.reference-timeline--mini article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.reference-timeline--mini article::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 51px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--reference-bg);
+  border: 1px solid color-mix(in srgb, var(--reference-accent) 70%, transparent);
+}
+
+.reference-timeline--mini-wide::before {
+  left: 90px;
+}
+
+.reference-timeline--mini-wide article {
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.reference-timeline--mini-wide article::before {
+  left: 87px;
+}
+
+.reference-panel--credentials .reference-stamp {
+  color: color-mix(in srgb, var(--reference-accent) 62%, var(--reference-muted));
+  font-size: 0.62rem;
+  line-height: 1.2;
+}
+
+.reference-panel--credentials .reference-entry h3 {
+  font-size: 0.83rem;
+  line-height: 1.24;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--reference-accent) 34%, var(--reference-text));
+}
+
+.reference-highlight {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.reference-bio-list article {
+  grid-template-columns: 84px minmax(0, 1fr);
+}
+
+.reference-project-list article {
+  grid-template-columns: 104px minmax(0, 1fr);
+}
+
+.reference-patent-list article {
+  grid-template-columns: 118px minmax(0, 1fr);
+}
+
+.reference-publication-list article {
+  grid-template-columns: 68px minmax(0, 1fr);
+}
+
+.reference-panel--bio .reference-list article {
+  padding-left: 0;
+  border-left: none;
+}
+
+@media (max-width: 1024px) {
+  .reference-hero {
+    grid-template-columns: 132px minmax(0, 1fr);
+  }
+
+  .reference-credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .reference-shell {
+    width: calc(100% - 24px);
+    padding: 28px 0 64px;
+  }
+
+  .reference-hero,
+  .reference-timeline article,
+  .reference-list article,
+  .reference-stack-section {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-panel {
+    padding: 0;
+  }
+
+  .reference-intro {
+    padding-right: 0;
+  }
+
+  .reference-utility {
+    position: static;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+  }
+
+  .reference-timeline::before,
+  .reference-timeline article::before {
+    display: none;
+  }
+
+  .reference-photo {
+    max-width: 148px;
+  }
+
+  .reference-intro h1 {
+    font-size: clamp(2.4rem, 14vw, 3.5rem);
+  }
+
+  .reference-section-head {
+    display: block;
+  }
+
+  .reference-text-link {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
+
 .home-body {
   --home-bg: #fcfaf4;
   --home-surface: rgba(255, 255, 255, 0.76);
