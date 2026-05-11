@@ -3,592 +3,749 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-en="Heng Shi | Compilers and AI Systems" data-zh="石恒 | 编译器与 AI 系统">Heng Shi | Compilers and AI Systems</title>
+    <title data-en="Heng Shi | Academic Homepage" data-zh="石恒 | 学术主页">Heng Shi | Academic Homepage</title>
     <meta
       name="description"
-      content="Heng Shi builds compilers, runtimes, and tools for practical AI systems at Enflame Tech."
+      content="Academic homepage of Heng Shi, focused on compilers, runtimes, programming models, sparse inference, and AI systems."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Literata:opsz,wght@7..72,600;7..72,700&family=Noto+Sans+SC:wght@400;500;700;800&family=Noto+Serif+SC:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260509d" />
   </head>
-  <body class="home-body home-reference-body" data-theme="light">
-    <main class="reference-shell">
-      <section class="reference-hero reference-panel reference-panel--hero">
-        <figure class="reference-photo">
-          <img
-            src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=THL_D54AAAAJ&citpid=3"
-            alt="Portrait of Heng Shi"
-            data-en-alt="Portrait of Heng Shi"
-            data-zh-alt="石恒照片"
-          />
-        </figure>
+  <body class="academic-body" data-theme="light" data-language="en">
+    <main>
+      <div class="academic-shell">
+        <section class="site-header">
+          <div class="site-header-grid">
+            <div class="profile-column">
+              <figure class="profile-frame">
+                <img
+                  class="profile-photo"
+                  src="./assets/profile/heng-shi-portrait.jpg?v=20260509d"
+                  alt="Portrait of Heng Shi"
+                  data-en-alt="Portrait of Heng Shi"
+                  data-zh-alt="石恒照片"
+                  data-fallback-src="./assets/profile/heng-shi-placeholder.svg?v=20260509d"
+                />
+              </figure>
+              <div class="profile-links" aria-label="Profile links">
+                <a class="profile-icon-link" href="https://scholar.google.com/citations?user=THL_D54AAAAJ&hl=zh-CN" target="_blank" rel="noreferrer noopener" aria-label="Google Scholar" title="Google Scholar">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 2 8l10 5 10-5-10-5Zm-4 8.7V15c0 2.3 2.8 4 4 4s4-1.7 4-4v-3.3l-4 2-4-2Z" fill="currentColor" />
+                  </svg>
+                </a>
+                <a class="profile-icon-link" href="https://github.com/codes1gn" target="_blank" rel="noreferrer noopener" aria-label="GitHub" title="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-1.9c-3.13.68-3.79-1.33-3.79-1.33-.5-1.27-1.24-1.61-1.24-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.14 1.7 1.14.99 1.67 2.6 1.19 3.24.91.1-.71.39-1.19.7-1.46-2.5-.28-5.13-1.24-5.13-5.52 0-1.22.44-2.23 1.14-3.01-.11-.28-.49-1.42.11-2.95 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.6 1.53.22 2.67.11 2.95.71.78 1.14 1.79 1.14 3.01 0 4.29-2.64 5.24-5.16 5.51.4.35.76 1.03.76 2.09v3.1c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z" fill="currentColor" />
+                  </svg>
+                </a>
+                <a class="profile-icon-link" href="https://www.linkedin.com/in/heng-shi-467238128/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" title="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5.5 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM4 10h3v10H4V10Zm5 0h2.9v1.4h.1c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.7V20h-3v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V20H9V10Z" fill="currentColor" />
+                  </svg>
+                </a>
+                <a class="profile-icon-link profile-icon-link--orcid" href="https://orcid.org/0000-0002-1779-9221" target="_blank" rel="noreferrer noopener" aria-label="ORCID" title="ORCID">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="11" fill="currentColor" />
+                    <path d="M7.6 7.2h1.2v9.5H7.6V7.2Zm.6-1.5a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6Zm2.4 3.3h3.3c2 0 3.1 1.4 3.1 3.4 0 2.1-1.2 3.5-3.2 3.5h-3.2V9Zm1.2 1.1v5.3h1.8c1.5 0 2.2-1 2.2-2.6 0-1.6-.7-2.7-2.2-2.7h-1.8Z" fill="#ffffff" />
+                  </svg>
+                </a>
+                <a class="profile-icon-link" href="https://github.com/codes1gn/resume-hengshi" target="_blank" rel="noreferrer noopener" aria-label="CV" title="CV">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 2.5h8l4 4V21a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-17a1.5 1.5 0 0 1 1-1.5Zm7 1.7v3.3h3.3L13 4.2ZM8 11h8v1.4H8V11Zm0 3h8v1.4H8V14Zm0 3h5v1.4H8V17Z" fill="currentColor" />
+                  </svg>
+                </a>
+                <a class="profile-icon-link" href="mailto:heng.shi@enflame-tech.com" aria-label="Email" title="Email">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6.5h18a1 1 0 0 1 1 1v9A1.5 1.5 0 0 1 20.5 18h-17A1.5 1.5 0 0 1 2 16.5v-9a1 1 0 0 1 1-1Zm0 2v.4l9 5.1 9-5.1v-.4H3Zm18 2.7-8.5 4.8a1 1 0 0 1-1 0L3 11.2v5.3h18v-5.3Z" fill="currentColor" />
+                  </svg>
+                </a>
+              </div>
+            </div>
 
-        <div class="reference-intro">
-          <div class="reference-utility">
-            <button class="reference-mini-toggle reference-mini-toggle--language" type="button" data-language-toggle aria-pressed="false" aria-label="Switch language" title="Switch language">
-              <span data-language-label>EN</span>
+            <div class="intro-panel">
+              <p class="intro-eyebrow">
+                <span class="lang-en">Compilers, runtimes, programming models, AI systems</span>
+                <span class="lang-zh" hidden>编译器、运行时、编程模型与 AI 系统</span>
+              </p>
+              <h1 class="site-title">
+                <span class="lang-en">Heng Shi</span>
+                <span class="lang-zh" hidden>石恒</span>
+              </h1>
+              <p class="intro-meta">
+                <span class="lang-en">Principal Engineer / Chief Researcher, Research Academy, Enflame Tech</span>
+                <span class="lang-zh" hidden>燧原科技研究院 主任工程师 / 首席研究员</span>
+              </p>
+              <p class="intro-summary intro-summary--slogan lang-en">
+                I like to tackle <span class="intro-slogan-accent">hard systems challenges</span>
+                as <span class="intro-slogan-accent">puzzles</span>: follow the clues,
+                rule out dead ends, and keep digging until the mechanism is clear.
+              </p>
+              <p class="intro-summary intro-summary--slogan lang-zh" hidden>
+                我喜欢把<span class="intro-slogan-accent">棘手的系统挑战</span>当作<span class="intro-slogan-accent">谜题</span>来解：沿着线索推进，排除走不通的路径，直到真正看清底层机制。
+              </p>
+              <p class="intro-meta">
+                <span class="lang-en">high performance computing; kernel programming languages; software for AI; sparse computing and full-stack LLM systems</span>
+                <span class="lang-zh" hidden>高性能计算；内核编程语言；面向 AI 的软件；稀疏计算与全栈大模型系统</span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <div class="academic-shell academic-shell--nav">
+          <ul class="site-nav-list">
+            <li><a href="#about" data-section-link><span class="lang-en">About</span><span class="lang-zh" hidden>简介</span></a></li>
+            <li><a href="#bio" data-section-link><span class="lang-en">Bio</span><span class="lang-zh" hidden>自述</span></a></li>
+            <li><a href="#news" data-section-link><span class="lang-en">News</span><span class="lang-zh" hidden>近况</span></a></li>
+            <li><a href="#publications" data-section-link><span class="lang-en">Publications</span><span class="lang-zh" hidden>论文</span></a></li>
+            <li><a href="#projects" data-section-link><span class="lang-en">Projects</span><span class="lang-zh" hidden>项目</span></a></li>
+            <li><a href="#vitae" data-section-link><span class="lang-en">Vitae</span><span class="lang-zh" hidden>履历</span></a></li>
+            <li class="nav-utility">
+              <button class="language-switch" type="button" data-language-toggle aria-pressed="false" aria-label="Switch language" title="Switch language">
+                <span data-language-label>中文</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="academic-shell">
+        <section class="docs-section" id="about">
+          <h4><span class="lang-en">About</span><span class="lang-zh" hidden>简介</span></h4>
+          <p class="lang-en">
+            I am Principal Engineer / Chief Researcher in the Research Academy at
+            <a class="body-link" href="https://enflame-tech.com/" target="_blank" rel="noreferrer noopener">Enflame Tech</a>,
+            where I work on compilers, runtimes, kernel programming models, and the system
+            software layers needed to make AI computing practical on modern accelerators.
+          </p>
+          <p class="lang-zh" hidden>
+            我目前在
+            <a class="body-link" href="https://enflame-tech.com/" target="_blank" rel="noreferrer noopener">燧原科技</a>
+            研究院担任主任工程师 / 首席研究员，主要工作围绕编译器、运行时、计算内核编程模型，以及支撑现代 AI 加速器落地的系统软件层展开。
+          </p>
+          <p class="lang-en">
+            Most of my work is around high-performance software for AI, especially the junction of
+            languages, compilers, runtimes, and system abstractions for accelerators. I care about
+            designs that keep low-level control without making the software stack harder to evolve.
+          </p>
+          <p class="lang-zh" hidden>
+            我的工作大多围绕面向 AI 的高性能软件展开，尤其关心语言、编译器、运行时，以及面向加速器的系统抽象之间的交界面。我在意的是，怎样在保留底层控制力的同时，不把整套软件栈做得越来越难演进。
+          </p>
+          <p class="lang-en">
+            That shows up in several public projects. CroqTile turns ideas around TileFlow and DMA into
+            a language, autotuning workflow, and toolchain for kernel development. On the systems side,
+            work such as
+            <a class="body-link" href="https://github.com/LancerLab/Samoyeds" target="_blank" rel="noreferrer noopener">Samoyeds</a>
+            and
+            <a class="body-link" href="https://github.com/LancerLab/SPIDER" target="_blank" rel="noreferrer noopener">SPIDER</a>
+            looks at sparse and accelerator-oriented execution from different angles, while my Rust-based
+            serving infrastructure work around Candle and candle-vLLM style execution on Enflame GCU
+            brings the same concerns into full-stack LLM systems.
+          </p>
+          <p class="lang-zh" hidden>
+            这些想法也落在几类公开项目里。语言这一侧，CroqTile 把围绕 TileFlow 和 DMA 的想法落成了语言、自动调优流程和 kernel 开发工具链。系统这一侧，
+            <a class="body-link" href="https://github.com/LancerLab/Samoyeds" target="_blank" rel="noreferrer noopener">Samoyeds</a>
+            和
+            <a class="body-link" href="https://github.com/LancerLab/SPIDER" target="_blank" rel="noreferrer noopener">SPIDER</a>
+            分别从不同角度处理稀疏和面向加速器执行的问题；而围绕 Candle、candle-vLLM 风格执行与 Enflame GCU 的 Rust 推理基础设施，则把同样的关注点延伸到全栈大模型系统里。
+          </p>
+        </section>
+
+        <section class="docs-section" id="bio">
+          <h4><span class="lang-en">Bio</span><span class="lang-zh" hidden>自述</span></h4>
+          <p class="lang-en">
+            Dr. Heng Shi received his Ph.D. from the University of Bath, after undergraduate study in
+            computer science at Tsinghua University.
+          </p>
+          <p class="lang-zh" hidden>
+            石恒于 2018 年毕业于英国巴斯大学电子与电气工程系并获得博士学位，2013 年获得清华大学计算机科学与技术系学士学位。
+          </p>
+          <p class="lang-en">
+            He worked at Enflame as a Senior Algorithm Engineer and later as a Software Architect from
+            2018 to 2022, and has led research work as Principal Engineer / Chief Researcher since 2022,
+            focusing on AI system stacks, performance optimization, and tooling design. He has published
+            over 20 papers and received more than 1800 citations overall, with work presented at venues
+            including EuroSys, PPoPP, CGO, and ASE. His recent public work includes the CroqTile language and toolchain,
+            Samoyeds at EuroSys 2025, SPIDER at PPoPP 2026, and related work on AI compilers, sparse
+            acceleration, and systems for LLM serving. Earlier work spans forecasting and energy systems,
+            while related community-facing efforts include participation in MLCommons / MLPerf and AIIA.
+          </p>
+          <p class="lang-zh" hidden>
+            石恒曾于 2018 年至 2022 年在燧原科技担任资深算法工程师、软件架构师，自 2022 年起担任主任工程师 / 首席研究员并开始带领研究团队，主要围绕 AI 系统栈的性能优化与工具链设计展开工作。他已累计发表论文 20 余篇，总引用超过 1800 次，相关工作发表于多个人工智能与计算机系统方向的重要会议。近年的公开工作包括 CroqTile 语言与工具链、EuroSys 2025 的 Samoyeds、PPoPP 2026 的 SPIDER，以及围绕 AI 编译器、稀疏加速与大模型服务系统的相关研究；更早期的工作则覆盖预测与能源系统方向，同时也参与了 MLCommons / MLPerf 和 AIIA 的相关社区工作。
+          </p>
+        </section>
+
+        <section class="docs-section" id="news">
+          <div class="section-row">
+            <h4><span class="lang-en">News</span><span class="lang-zh" hidden>近况</span></h4>
+            <p class="section-note lang-en">Selected public updates from releases, papers, and open project records.</p>
+            <p class="section-note lang-zh" hidden>这里只保留公开可验证的近况条目，不做完整罗列。</p>
+          </div>
+          <ul class="news-list">
+            <li class="news-item">
+              <div class="news-date">2026.04</div>
+              <div>
+                <p class="lang-en">
+                  CroqTile
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.4-pre-beta/" target="_blank" rel="noreferrer noopener">v1.0.4 pre-beta</a>
+                  was posted on the official changelog, continuing the public rollout of the language and compiler toolchain.
+                </p>
+                <p class="lang-zh" hidden>
+                  CroqTile 官方更新日志发布了
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.4-pre-beta/" target="_blank" rel="noreferrer noopener">v1.0.4 pre-beta</a>，继续推进这套语言与编译工具链的公开演进。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2026</div>
+              <div>
+                <p class="lang-en">
+                  The public
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">CroqTile website</a>,
+                  <a class="body-link" href="https://github.com/LancerLab/croqtile" target="_blank" rel="noreferrer noopener">language repository</a>,
+                  and
+                  <a class="body-link" href="https://github.com/LancerLab/croqtile-tuner" target="_blank" rel="noreferrer noopener">tuner repository</a>
+                  continue to make the language and tooling stack inspectable in the open.
+                </p>
+                <p class="lang-zh" hidden>
+                  公开的
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">CroqTile 网站</a>、
+                  <a class="body-link" href="https://github.com/LancerLab/croqtile" target="_blank" rel="noreferrer noopener">语言仓库</a>
+                  和
+                  <a class="body-link" href="https://github.com/LancerLab/croqtile-tuner" target="_blank" rel="noreferrer noopener">调优器仓库</a>
+                  持续让这套语言与工具链以可检查的方式对外开放。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2026</div>
+              <div>
+                <p class="lang-en">
+                  SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping was published at
+                  <a class="body-link" href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">PPoPP 2026</a>.
+                </p>
+                <p class="lang-zh" hidden>
+                  SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping 发表在
+                  <a class="body-link" href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">PPoPP 2026</a>。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2026.01</div>
+              <div>
+                <p class="lang-en">
+                  CroqTile
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.3-open-source/" target="_blank" rel="noreferrer noopener">v1.0.3 Open Source Base</a>
+                  marked the public open-source release of the base language stack.
+                </p>
+                <p class="lang-zh" hidden>
+                  CroqTile
+                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.3-open-source/" target="_blank" rel="noreferrer noopener">v1.0.3 Open Source Base</a>
+                  完成了基础语言栈的公开开源发布。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2025</div>
+              <div>
+                <p class="lang-en">
+                  Samoyeds was published at
+                  <a class="body-link" href="https://doi.org/10.1145/3689031.3717455" target="_blank" rel="noreferrer noopener">EuroSys 2025</a>,
+                  presenting sparse-tensor-core acceleration for MoE models with structured sparsity.
+                </p>
+                <p class="lang-zh" hidden>
+                  Samoyeds 发表在
+                  <a class="body-link" href="https://doi.org/10.1145/3689031.3717455" target="_blank" rel="noreferrer noopener">EuroSys 2025</a>，聚焦利用结构化稀疏和 Sparse Tensor Core 加速 MoE 模型。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2025</div>
+              <div>
+                <p class="lang-en">
+                  Public repositories around
+                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-gcu" target="_blank" rel="noreferrer noopener">candle-gcu</a>
+                  and
+                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">candle-vllm-gcu</a>
+                  document ongoing Rust-based LLM serving work on Enflame GCU.
+                </p>
+                <p class="lang-zh" hidden>
+                  围绕
+                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-gcu" target="_blank" rel="noreferrer noopener">candle-gcu</a>
+                  和
+                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">candle-vllm-gcu</a>
+                  的公开仓库，记录了基于 Rust 的 Enflame GCU 大模型服务系统持续推进情况。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2025</div>
+              <div>
+                <p class="lang-en">
+                  Postiz was published at
+                  <a class="body-link" href="https://doi.org/10.1145/3696443.3708935" target="_blank" rel="noreferrer noopener">CGO 2025</a>
+                  on post-increment addressing for loop optimization and code size reduction.
+                </p>
+                <p class="lang-zh" hidden>
+                  Postiz 发表在
+                  <a class="body-link" href="https://doi.org/10.1145/3696443.3708935" target="_blank" rel="noreferrer noopener">CGO 2025</a>，讨论后增量寻址在循环优化和代码尺寸压缩上的作用。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2024-2025</div>
+              <div>
+                <p class="lang-en">
+                  Continued participation in
+                  <span class="body-link">MLCommons / MLPerf</span>
+                  and
+                  <span class="body-link">AIIA</span>
+                  has kept part of the work connected to public benchmarking and industry-standard discussions.
+                </p>
+                <p class="lang-zh" hidden>
+                  持续参与
+                  <span class="body-link">MLCommons / MLPerf</span>
+                  与
+                  <span class="body-link">AIIA</span>
+                  相关工作，也让一部分研究和工程经验持续连接到公开评测与产业标准讨论中。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2024</div>
+              <div>
+                <p class="lang-en">
+                  UFront appeared at
+                  <a class="body-link" href="https://doi.org/10.1145/3691620.3695002" target="_blank" rel="noreferrer noopener">ASE 2024</a>
+                  as a unified MLIR frontend effort for deep learning.
+                </p>
+                <p class="lang-zh" hidden>
+                  UFront 发表在
+                  <a class="body-link" href="https://doi.org/10.1145/3691620.3695002" target="_blank" rel="noreferrer noopener">ASE 2024</a>，目标是构建统一的深度学习 MLIR 前端。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="docs-section" id="publications">
+          <div class="section-row">
+            <h4><span class="lang-en">Publications</span><span class="lang-zh" hidden>论文</span></h4>
+            <a class="section-link" href="https://scholar.google.com/citations?user=THL_D54AAAAJ&hl=zh-CN" target="_blank" rel="noreferrer noopener">Google Scholar</a>
+          </div>
+          <p class="section-note lang-en">Recent papers center on compilers, sparse inference, and AI systems, with earlier work in forecasting and energy systems.</p>
+          <p class="section-note lang-zh" hidden>近年的论文主要收束在编译基础设施、稀疏推理与 AI 系统，更早的工作则延伸到预测与能源系统。</p>
+          <div class="publication-tabs" role="tablist" aria-label="Publication filters">
+            <button class="publication-tab is-active" type="button" role="tab" aria-selected="true" data-publication-filter="selected">
+              <span class="lang-en">select</span><span class="lang-zh" hidden>select</span>
             </button>
-            <button class="reference-mini-toggle reference-mini-toggle--theme" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme" title="Switch theme">
-              <svg class="reference-theme-icon reference-theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 6.2a5.8 5.8 0 1 0 0 11.6 5.8 5.8 0 0 0 0-11.6Zm0-4.2h1.5v2.5H12V2Zm0 19.5h1.5V24H12v-2.5ZM2 11.3h2.5v1.5H2v-1.5Zm19.5 0H24v1.5h-2.5v-1.5ZM5.1 4l1.1-1.1L8 4.7 6.9 5.8 5.1 4Zm10.9 10.9 1.1-1.1 1.8 1.8-1.1 1.1-1.8-1.8ZM18.9 4l-1.8 1.8-1.1-1.1 1.8-1.8L18.9 4ZM8 19.1l-1.8-1.8L5.1 18.4l1.8 1.8L8 19.1Z" fill="currentColor"/>
-              </svg>
-              <svg class="reference-theme-icon reference-theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M14.9 2.6a8.7 8.7 0 1 0 6.5 13.9 9.4 9.4 0 1 1-6.5-13.9Z" fill="currentColor"/>
-              </svg>
-              <span class="sr-only" data-theme-label>Switch theme</span>
+            <button class="publication-tab" type="button" role="tab" aria-selected="false" data-publication-filter="all">
+              <span class="lang-en">ALL</span><span class="lang-zh" hidden>ALL</span>
+            </button>
+            <button class="publication-tab" type="button" role="tab" aria-selected="false" data-publication-filter="ai">
+              <span class="lang-en">AI system and application</span><span class="lang-zh" hidden>AI system and application</span>
+            </button>
+            <button class="publication-tab" type="button" role="tab" aria-selected="false" data-publication-filter="smart-grid">
+              <span class="lang-en">smart grid</span><span class="lang-zh" hidden>smart grid</span>
             </button>
           </div>
-          <h1 data-en="Heng Shi" data-zh="石恒">Heng Shi</h1>
-          <h2 data-en="I enjoy solving hard, puzzle-like problems in my work and life." data-zh="我最喜欢做的，是顺着线索把那些真正难的问题一点点解开。">I enjoy solving hard, puzzle-like problems in my work and life.</h2>
-          <p class="reference-hero-note" data-en="I build compilers, runtimes, and tools for practical AI systems." data-zh="这些年，我一直在编译器、运行时和 AI 系统软件栈之间工作，想把复杂系统看清，也把它真正做通。">I build compilers, runtimes, and tools for practical AI systems.</p>
-          <p class="reference-affiliation" data-en="Principal Engineer / Chief Researcher, Research Academy, Enflame Tech." data-zh="现任燧原智能研究院主任工程师 / 首席研究员">Principal Engineer / Chief Researcher, Research Academy, Enflame Tech.</p>
-          <div class="reference-links">
-            <a class="reference-icon-link" href="https://scholar.google.com/citations?user=THL_D54AAAAJ&hl=zh-CN" aria-label="Google Scholar" title="Google Scholar">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3 2 8l10 5 8-4v6h2V8L12 3Zm-4 8.7V15c0 2.1 2.4 3.8 4 3.8s4-1.7 4-3.8v-3.3l-4 2-4-2Z" fill="currentColor"/>
-              </svg>
-              <span class="sr-only">Google Scholar</span>
-            </a>
-            <a class="reference-icon-link" href="https://github.com/codes1gn" aria-label="GitHub" title="GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.5 7 4 12l4.5 5 1.4-1.3L6.6 12l3.3-3.7L8.5 7Zm7 0-1.4 1.3 3.3 3.7-3.3 3.7 1.4 1.3 4.5-5-4.5-5Zm-2.3-2-4 14h1.8l4-14h-1.8Z" fill="currentColor"/>
-              </svg>
-              <span class="sr-only">GitHub</span>
-            </a>
-            <a class="reference-icon-link" href="https://www.linkedin.com/in/heng-shi-467238128/" aria-label="LinkedIn" title="LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5.5 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM4 10h3v10H4V10Zm5 0h2.9v1.4h.1c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.7V20h-3v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V20H9V10Z" fill="currentColor"/>
-              </svg>
-              <span class="sr-only">LinkedIn</span>
-            </a>
-            <a class="reference-icon-link" href="mailto:heng.shi@enflame-tech.com" aria-label="Email" title="Email">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 6.5h18a1 1 0 0 1 1 1v9a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 16.5v-9a1 1 0 0 1 1-1Zm0 2v.4l9 5.1 9-5.1v-.4H3Zm18 2.7-8.5 4.8a1 1 0 0 1-1 0L3 11.2v5.3h18v-5.3Z" fill="currentColor"/>
-              </svg>
-              <span class="sr-only">Email</span>
-            </a>
+          <div class="publication-list">
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping</p>
+                <p class="publication-meta">Qiqi Gu, Chenpeng Wu, Heng Shi, Jianguo Yao. PPoPP 2026.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">Do We Need Tensor Cores for Stencil Computations?</p>
+                <p class="publication-meta">Q Gu, C Wu, H Shi, J Yao, H Guan. arXiv preprint arXiv:2603.00477, 2026.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2025</div>
+              <div class="publication-body">
+                <p class="publication-title">Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores</p>
+                <p class="publication-meta">Chenpeng Wu, Qiqi Gu, Heng Shi, Jianguo Yao, Haibing Guan. EuroSys 2025.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3689031.3717455" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all ai">
+              <div class="publication-year">2025</div>
+              <div class="publication-body">
+                <p class="publication-title">SPTCStencil: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swap</p>
+                <p class="publication-meta">Q Gu, C Wu, H Shi, J Yao. arXiv e-prints, arXiv:2506.22035, 2025.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2025</div>
+              <div class="publication-body">
+                <p class="publication-title">Postiz: Extending Post-increment Addressing for Loop Optimization and Code Size Reduction</p>
+                <p class="publication-meta">Enming Fan, Xiaofeng Guan, Fan Hu, Heng Shi, Hao Zhou, Jianguo Yao. CGO 2025.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3696443.3708935" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2024</div>
+              <div class="publication-body">
+                <p class="publication-title">UFront: Toward a Unified MLIR Frontend for Deep Learning</p>
+                <p class="publication-meta">Guoqing Bao, Heng Shi, Chengyi Cui, Yalin Zhang, Jianguo Yao. ASE 2024.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3691620.3695002" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all ai">
+              <div class="publication-year">2024</div>
+              <div class="publication-body">
+                <p class="publication-title">SPHINX: Search Space-Pruning Heterogeneous Task Scheduling for Deep Neural Networks</p>
+                <p class="publication-meta">Bowen Yuchi, Heng Shi, Guoqing Bao. ICPP 2024.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3673038.3673155" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2024</div>
+              <div class="publication-body">
+                <p class="publication-title">Review of the opportunities and challenges to accelerate mass-scale application of smart grids with large-language models</p>
+                <p class="publication-meta">Heng Shi, L Fang, X Chen, C Gu, K Ma, X Zhang, Z Zhang, J Gu, E. G. Lim. IET Smart Grid, 2024.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2022</div>
+              <div class="publication-body">
+                <p class="publication-title">Decentralized home energy management system to reduce system peak and uncertainty</p>
+                <p class="publication-meta">Y Du, H Shi, M Xu, F Li. IET Conference Proceedings, 2022.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all ai">
+              <div class="publication-year">2024</div>
+              <div class="publication-body">
+                <p class="publication-title">Boost Linear Algebra Computation Performance via Efficient VNNI Utilization</p>
+                <p class="publication-meta">Hao Zhou, Qiukun Han, Heng Shi, Yalin Zhang, Jianguo Yao. ASPLOS 2024.</p>
+                <div class="publication-links"><a href="https://doi.org/10.1145/3620666.3651333" target="_blank" rel="noreferrer noopener">DOI</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2020</div>
+              <div class="publication-body">
+                <p class="publication-title">Deep learning for day-ahead electricity price forecasting</p>
+                <p class="publication-meta">C Zhang, R Li, H Shi, F Li. IET Smart Grid, 2020.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2019</div>
+              <div class="publication-body">
+                <p class="publication-title">A statistical approach to estimate imbalance-induced energy losses for data-scarce low voltage networks</p>
+                <p class="publication-meta">L Fang, K Ma, R Li, Z Wang, H Shi. IEEE Transactions on Power Systems, 2019.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2018</div>
+              <div class="publication-body">
+                <p class="publication-title">Data-driven uncertainty quantification and characterization for household energy demand across multiple time-scales</p>
+                <p class="publication-meta">H Shi, Q Ma, N Smith, F Li. IEEE Transactions on Smart Grid, 2018.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2018</div>
+              <div class="publication-body">
+                <p class="publication-title">Probabilistic network pricing considering demand uncertainty in distribution systems</p>
+                <p class="publication-meta">X Yang, X Yan, H Shi, C Gu, F Li. IEEE PES General Meeting, 2018.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2018</div>
+              <div class="publication-body">
+                <p class="publication-title">Uncertainty Analysis and Application on Smart Homes and Smart Grids: Big Data Approaches</p>
+                <p class="publication-meta">H Shi. University of Bath, 2018.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2018</div>
+              <div class="publication-body">
+                <p class="publication-title">Decentralised control for combined heat and power system in energy community</p>
+                <p class="publication-meta">H Shi, Z Zhang, F Li. CIRED 2018 - 25th International Conference on Electricity Distribution, 2018.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2017</div>
+              <div class="publication-body">
+                <p class="publication-title">Deep Learning for household load forecasting-A novel pooling deep RNN</p>
+                <p class="publication-meta">Heng Shi, Minghao Xu, Ran Li. IEEE Transactions on Smart Grid, 2017.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2017</div>
+              <div class="publication-body">
+                <p class="publication-title">A whole system assessment of novel deep learning approach on short-term load forecasting</p>
+                <p class="publication-meta">H Shi, M Xu, Q Ma, C Zhang, R Li, F Li. Energy Procedia, 2017.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2017</div>
+              <div class="publication-body">
+                <p class="publication-title">Assessment of relative efficiency of differing energy markets for community energy</p>
+                <p class="publication-meta">F. L. Lanqing Shan, Heng Shi, Zhong Zhang. CIRED 2018 - 25th International Conference on Electricity Distribution, 2017.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2017</div>
+              <div class="publication-body">
+                <p class="publication-title">Decentrailised control for combined heat and power system in energy community</p>
+                <p class="publication-meta">Heng Shi, Zhong Zhang, Furong Li. CIRED 2018 - 25th International Conference on Electricity Distribution, 2017.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2016</div>
+              <div class="publication-body">
+                <p class="publication-title">Evaluation of fault levels and power supply network impedances in 230/400 V 50 Hz generic distribution systems</p>
+                <p class="publication-meta">I Hernando-Gil, H Shi, F Li, S Djokic, M Lehtonen. IEEE Transactions on Power Delivery, 2016.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all">
+              <div class="publication-year">2016</div>
+              <div class="publication-body">
+                <p class="publication-title">The use of thaumatin and bovine serum albumin as proteins in model wine solutions in bentonite fining</p>
+                <p class="publication-meta">H Shi, D. M. Burmeister, A Frost, D. A. Patterson, B James. Journal of Wine Research, 2016.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2015</div>
+              <div class="publication-body">
+                <p class="publication-title">Demand Side Response Performance Assessment: An Impact Analysis of Load Profile Accuracy on DSR Performances</p>
+                <p class="publication-meta">Chen Zhao, Heng Shi, Ran Li, Furong Li. IEEE PES General Meeting, 2015. Best Research Paper Award.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all">
+              <div class="publication-year">2015</div>
+              <div class="publication-body">
+                <p class="publication-title">Combining mobile and fog computing: Using coap to link mobile device clouds with fog computing</p>
+                <p class="publication-meta">H Shi, N Chen, R Deters. IEEE International Conference on Data Science and Data Intensive Systems, 2015.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all smart-grid">
+              <div class="publication-year">2012</div>
+              <div class="publication-body">
+                <p class="publication-title">Coordinated charging of plug-in electric vehicles in charging stations</p>
+                <p class="publication-meta">Z Xu, Z Hu, Y Song, Z Luo, K Zhan, H Shi. Automation of Electric Power Systems, 2012.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="all ai">
+              <div class="publication-year">n.d.</div>
+              <div class="publication-body">
+                <p class="publication-title">SPTCStencil: Using Sparse Tensor Cores for Stencil Computation</p>
+                <p class="publication-meta">Q Gu, C Wu, H Shi, J Yao. Undated Scholar record.</p>
+              </div>
+            </article>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="reference-section reference-panel reference-panel--timeline">
-        <p class="reference-label" data-en="timeline" data-zh="经历">timeline</p>
-        <div class="reference-timeline">
-          <article data-link="https://enflame-tech.com/">
-            <div class="reference-stamp">2022.12 - present</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/enflame-logo.png" alt="Enflame logo" data-en-alt="Enflame logo" data-zh-alt="燧原科技标识" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="Principal Engineer / Chief Researcher, Enflame" data-zh="燧原科技，主任工程师 / 首席研究员">Principal Engineer / Chief Researcher, Enflame</h3>
-              <p data-en="I work on AI framework and systems research in the Research Academy, with a focus on compilers, runtimes, kernel programming models, and related research projects." data-zh="我在燧原研究院做 AI 框架与系统研究，主要围绕编译器、运行时、计算内核的编程抽象，以及相关项目的推进。">I work on AI framework and systems research in the Research Academy, with a focus on compilers, runtimes, kernel programming models, and related research projects.</p>
-            </div>
-          </article>
-          <article data-link="https://enflame-tech.com/">
-            <div class="reference-stamp">2021.03 - 2022.12</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/enflame-logo.png" alt="Enflame logo" data-en-alt="Enflame logo" data-zh-alt="燧原科技标识" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="Software Architect, Enflame" data-zh="燧原科技，软件架构师">Software Architect, Enflame</h3>
-              <p data-en="I worked on software architecture and technical planning across AI frameworks and system software, and also supported team building and technical evaluation." data-zh="我负责 AI 框架与系统软件的架构设计和技术规划，也参与团队建设与技术评估。">I worked on software architecture and technical planning across AI frameworks and system software, and also supported team building and technical evaluation.</p>
-            </div>
-          </article>
-          <article data-link="https://enflame-tech.com/">
-            <div class="reference-stamp">2020.02 - 2021.03</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/enflame-logo.png" alt="Enflame logo" data-en-alt="Enflame logo" data-zh-alt="燧原科技标识" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="Senior Algorithm Research Engineer, Enflame" data-zh="燧原科技，高级算法研究工程师">Senior Algorithm Research Engineer, Enflame</h3>
-              <p data-en="I worked on early-stage research across auto-parallelism, MLIR-related compiler work, benchmarking, and heterogeneous AI software systems." data-zh="我参与自动并行、MLIR 编译基础设施、基准评测与异构 AI 软件系统等方向的前期研究。">I worked on early-stage research across auto-parallelism, MLIR-related compiler work, benchmarking, and heterogeneous AI software systems.</p>
-            </div>
-          </article>
-          <article data-link="https://www.bath.ac.uk/">
-            <div class="reference-stamp">2014.10 - 2018.07</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/bath-logo.png" alt="University of Bath logo" data-en-alt="University of Bath logo" data-zh-alt="巴斯大学标识" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="Ph.D. / Assistant Researcher, University of Bath" data-zh="英国巴斯大学，博士 / 助理研究员">Ph.D. / Assistant Researcher, University of Bath</h3>
-              <p data-en="My doctoral work focused on smart grids, load forecasting, and energy systems, alongside research and project work at the University of Bath." data-zh="在巴斯大学读博期间，我的研究主要围绕智能电网、负荷预测与能源系统展开，同时也参与相关科研与项目工作。">My doctoral work focused on smart grids, load forecasting, and energy systems, alongside research and project work at the University of Bath.</p>
-            </div>
-          </article>
-          <article data-link="https://www.tsinghua.edu.cn/en/">
-            <div class="reference-stamp">2009.08 - 2013.06</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/tsinghua-emblem.png" alt="Tsinghua University emblem" data-en-alt="Tsinghua University emblem" data-zh-alt="清华大学校徽" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="B.Sc., Tsinghua University" data-zh="清华大学，本科">B.Sc., Tsinghua University</h3>
-              <p data-en="I studied at Tsinghua University, with early work in nonlinear optimization and AGV swarm scheduling." data-zh="我在清华大学完成本科学习，本科阶段的早期工作涉及非线性优化与 AGV 集群调度。">I studied at Tsinghua University, with early work in nonlinear optimization and AGV swarm scheduling.</p>
-            </div>
-          </article>
-          <article data-link="https://www.cjhs.csedu.gov.cn/">
-            <div class="reference-stamp" data-en="before 2009" data-zh="2009 之前">before 2009</div>
-            <figure class="reference-mark">
-              <img src="./assets/logos/changjun-emblem.png" alt="Changjun High School emblem" data-en-alt="Changjun High School emblem" data-zh-alt="长郡中学校徽" />
-            </figure>
-            <div class="reference-entry">
-              <h3 data-en="Changjun High School, Changsha" data-zh="长沙长郡中学">Changjun High School, Changsha</h3>
-              <p data-en="I completed my pre-university study in Changsha before moving on to Tsinghua University." data-zh="我的大学前学习阶段在长沙完成，之后进入清华大学。">I completed my pre-university study in Changsha before moving on to Tsinghua University.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+        <section class="docs-section" id="projects">
+          <div class="section-row">
+            <h4><span class="lang-en">Projects</span><span class="lang-zh" hidden>项目</span></h4>
+            <p class="section-note lang-en">Selected systems and research artifacts from recent years.</p>
+            <p class="section-note lang-zh" hidden>近年的代表性系统与研究工件。</p>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <a class="project-figure" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">
+                <img
+                  src="./assets/projects/croqtile-autotune.svg"
+                  alt="CroqTile autotuning convergence figure"
+                  data-en-alt="CroqTile autotuning convergence figure"
+                  data-zh-alt="CroqTile 自动调优收敛图"
+                />
+              </a>
+              <div class="project-caption">
+                <h5>CroqTile</h5>
+                <p class="lang-en">
+                  A next-gen programming language for AI kernels and accelerators, built around TileFlow and DMA-oriented abstractions while reporting about 5x productivity on public cases.
+                </p>
+                <p class="lang-zh" hidden>
+                  面向 AI 计算内核与异构加速器的新一代编程语言，围绕 TileFlow 与 DMA 抽象展开；在公开案例中，开发效率约提升 5 倍。
+                </p>
+                <div class="project-links">
+                  <a href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">Website</a>
+                  <a href="https://github.com/LancerLab/croqtile" target="_blank" rel="noreferrer noopener">Code</a>
+                  <a href="https://github.com/LancerLab/croqtile-tuner" target="_blank" rel="noreferrer noopener">Tuner</a>
+                </div>
+              </div>
+            </article>
 
-      <section class="reference-section reference-panel reference-panel--bio">
-        <p class="reference-label" data-en="bio" data-zh="自述">bio</p>
-        <div class="reference-prose">
-          <p data-en="What I love most is deciphering hard problems, especially the kind that only yield to a Sherlock Holmes style of investigation. Following clues, testing hypotheses, and uncovering hidden structure is the way I most naturally work, and it explains almost everything about my path. In high school, that instinct first found a home in physics, where I trained through olympiad competition, ranked in the national top ten in China, and received the highest experimental score. I later studied computer science, moved into electrical engineering, and during my Ph.D. gravitated toward uncertainty in complex systems and some of the early attempts to bring deep models into electrical engineering problems." data-zh="我一直最喜欢的，其实是解题。越是那种一开始看不清结构、只能顺着线索慢慢往里走的问题，越让我着迷。我很喜欢这种有点像查案的过程：先观察，再猜测，再验证，直到事情内部的逻辑自己浮出来。很多经历，其实都是从这个兴趣长出来的。高中时我最先投入的是物理，在竞赛训练里进过全国前十，也拿到过实验成绩第一。后来我先学计算机科学，又转到电气工程；到博士阶段，兴趣慢慢收束到复杂系统中的不确定性，以及深度模型在电气工程里的早期应用。">What I love most is deciphering hard problems, especially the kind that only yield to a Sherlock Holmes style of investigation. Following clues, testing hypotheses, and uncovering hidden structure is the way I most naturally work, and it explains almost everything about my path. In high school, that instinct first found a home in physics, where I trained through olympiad competition, ranked in the national top ten in China, and received the highest experimental score. I later studied computer science, moved into electrical engineering, and during my Ph.D. gravitated toward uncertainty in complex systems and some of the early attempts to bring deep models into electrical engineering problems.</p>
-          <p data-en="In industry, I started as an algorithm engineer, but I was quickly drawn to AI systems as a whole. To understand that stack properly, I taught myself high-performance computing, operator optimization, framework design, drivers, and hardware. Over time, I learned to contribute across the stack, and that remains the core of how I work today." data-zh="工作以后，我虽然是从算法工程师做起，但很快就不想只停在模型或算法的一角，而是更想把整个 AI 系统从上到下看明白。于是我一路把高性能计算、算子优化、框架设计、驱动和硬件这些知识补了起来，也慢慢把自己训练成能在这些层面真正动手、真正贡献的人。到现在，这仍然是我最自然的工作方式。">In industry, I started as an algorithm engineer, but I was quickly drawn to AI systems as a whole. To understand that stack properly, I taught myself high-performance computing, operator optimization, framework design, drivers, and hardware. Over time, I learned to contribute across the stack, and that remains the core of how I work today.</p>
-        </div>
-      </section>
+            <article class="project-card">
+              <a class="project-figure" href="https://arxiv.org/abs/2503.10725" target="_blank" rel="noreferrer noopener">
+                <img
+                  src="./assets/projects/samoyeds-paper-figure.png"
+                  alt="Samoyeds paper figure"
+                  data-en-alt="Samoyeds paper figure"
+                  data-zh-alt="Samoyeds 论文图"
+                />
+              </a>
+              <div class="project-caption">
+                <h5>Samoyeds</h5>
+                <p class="lang-en">
+                  A EuroSys'25 system for MoE acceleration that applies structured sparsity to both activations and parameters on Sparse Tensor Cores.
+                </p>
+                <p class="lang-zh" hidden>
+                  EuroSys 2025 的 MoE 加速系统，同时在激活和参数两侧应用结构化稀疏，并利用 Sparse Tensor Core 提升推理效率。
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/LancerLab/Samoyeds" target="_blank" rel="noreferrer noopener">Code</a>
+                  <a href="https://arxiv.org/abs/2503.10725" target="_blank" rel="noreferrer noopener">arXiv</a>
+                </div>
+              </div>
+            </article>
 
-      <section class="reference-section reference-panel reference-panel--projects">
-        <p class="reference-label" data-en="featured projects" data-zh="精选项目">featured projects</p>
-        <div class="reference-list reference-project-list">
-          <article data-link="https://lancerlab.github.io/croqtile-website/en/">
-            <div class="reference-stamp" data-en="flagship artifact" data-zh="代表性系统">flagship artifact</div>
-            <div class="reference-entry">
-              <h3 data-en="CroqTile: a next-gen programming language for AI kernels and accelerators" data-zh="CroqTile：面向 AI 计算内核与异构加速器的新一代编程语言">CroqTile: a next-gen programming language for AI kernels and accelerators</h3>
-              <p data-en="A GPU and accelerator programming language centered on TileFlow and DMA-oriented abstractions. It targets higher productivity without giving up low-level control or near-vendor performance." data-zh="它围绕 TileFlow 与 DMA 抽象展开，希望在保留底层控制力、也不放弃接近厂商实现性能的前提下，让计算内核开发不再只是重复的体力活。">
-                A GPU and accelerator programming language centered on TileFlow
-                and DMA-oriented abstractions. It targets higher productivity
-                without giving up low-level control or near-vendor performance.
-              </p>
-              <ul class="reference-bullets">
-                <li data-en="About 5x productivity and around 40% of equivalent CUDA code." data-zh="开发效率约提升 5 倍，代码量约为同等 CUDA 的 40%。">About 5x productivity and around 40% of equivalent CUDA code.</li>
-                <li data-en="Near-zero abstraction cost on published cases." data-zh="在已公开案例中接近零抽象开销。">Near-zero abstraction cost on published cases.</li>
-                <li data-en="353 compile-time checks and 1,319 runtime assertions." data-zh="包含 353 项编译期检查与 1,319 项运行时断言。">353 compile-time checks and 1,319 runtime assertions.</li>
-                <li data-en="AI-driven tuning results reported from 671 to 1127 TFLOPS in 68 iterations." data-zh="在公开案例中，AI 驱动调优 68 次迭代可将性能从 671 提升到 1127 TFLOPS。">AI-driven tuning results reported from 671 to 1127 TFLOPS in 68 iterations.</li>
-              </ul>
-              <div class="reference-inline-links">
-                <a href="https://github.com/LancerLab/croqtile">Code</a>
-                <a href="https://lancerlab.github.io/croqtile-website/en/">Website</a>
-                <a href="https://github.com/LancerLab/croqtile-tuner">Tuner</a>
+            <article class="project-card">
+              <a class="project-figure" href="https://arxiv.org/abs/2506.22035" target="_blank" rel="noreferrer noopener">
+                <img
+                  src="./assets/projects/spider-paper-figure.png"
+                  alt="SPIDER paper figure"
+                  data-en-alt="SPIDER paper figure"
+                  data-zh-alt="SPIDER 论文图"
+                />
+              </a>
+              <div class="project-caption">
+                <h5>SPIDER</h5>
+                <p class="lang-en">
+                  A PPoPP'26 system that turns stencil computation into sparse matrix multiplication through strided swapping on Sparse Tensor Cores.
+                </p>
+                <p class="lang-zh" hidden>
+                  PPoPP 2026 的系统工作，通过 strided swapping 将 stencil computation 转写为稀疏矩阵乘，并释放 Sparse Tensor Core 的性能潜力。
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/LancerLab/SPIDER" target="_blank" rel="noreferrer noopener">Code</a>
+                  <a href="https://arxiv.org/abs/2506.22035" target="_blank" rel="noreferrer noopener">arXiv</a>
+                </div>
               </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024.12 - present</div>
-            <div class="reference-entry">
-              <h3 data-en="Pushing the limits of modern LLM serving via structured sparsity research" data-zh="用结构化稀疏继续逼近现代大模型推理服务的性能边界">Pushing the limits of modern LLM serving via structured sparsity research</h3>
-              <p data-en="Research on how structured sparsity can keep pushing the performance limits of modern LLM serving engines, with Samoyeds, Samoyeds-Kernel, and SPIDER positioned as a stack of sparse operator libraries and sparse inference solutions." data-zh="这条研究主线关心的，不是某个单点技巧，而是如何把 Samoyeds、Samoyeds-Kernel 与 SPIDER 组织成一整套稀疏算子库与稀疏推理方案，持续向前推进现代大模型推理引擎的上限。">
-                Research on how structured sparsity can keep pushing the
-                performance limits of modern LLM serving engines, with
-                Samoyeds, Samoyeds-Kernel, and SPIDER positioned as a stack of
-                sparse operator libraries and sparse inference solutions.
-              </p>
-              <div class="reference-inline-links">
-                <a href="https://github.com/LancerLab/Samoyeds">Samoyeds</a>
-                <a href="https://github.com/LancerLab/Samoyeds-Kernel">Samoyeds-Kernel</a>
-                <a href="https://github.com/LancerLab/SPIDER">SPIDER</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024.01 - 2025.06</div>
-            <div class="reference-entry">
-              <h3 data-en="A full LLM serving stack in Rust" data-zh="一整套以 Rust 构建的大模型推理栈">A full LLM serving stack in Rust</h3>
-              <p data-en="A Rust-based effort spanning Candle adaptation on Enflame GCU together with upstream work around mistral.rs and candle-vllm, covering fused operators, quantization, multi-GCU inference, GGUF support, memory allocation, and operator fusion." data-zh="这项工作一头是 Candle 在 Enflame GCU 上的适配，另一头是围绕 mistral.rs 与 candle-vllm 的上游贡献；我更在意的是把一条真正可用的 Rust 推理栈，从算子、量化、多卡到内存分配，完整打通。">
-                A Rust-based effort spanning Candle adaptation on Enflame GCU
-                together with upstream work around mistral.rs and candle-vllm,
-                covering fused operators, quantization, multi-GCU inference,
-                GGUF support, memory allocation, and operator fusion.
-              </p>
-              <div class="reference-inline-links">
-                <a href="https://github.com/EnflameTechnology/candle-gcu">candle-gcu</a>
-                <a href="https://github.com/EnflameTechnology/candle-vllm-gcu">candle-vllm-gcu</a>
-                <a href="https://github.com/EricLBuehler/mistral.rs">mistral.rs</a>
-                <a href="https://github.com/EricLBuehler/candle-vllm">candle-vllm</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+            </article>
 
-      <section class="reference-section reference-panel reference-panel--papers">
-        <div class="reference-section-head">
-          <p class="reference-label" data-en="papers" data-zh="论文">papers</p>
-          <a class="reference-text-link" href="https://scholar.google.com/citations?user=THL_D54AAAAJ&hl=zh-CN" data-en="full scholar archive" data-zh="完整论文档案">full scholar archive</a>
-        </div>
-        <p class="reference-subline" data-en="Recent papers center on compiler infrastructure, sparse inference, and AI systems. Earlier work focused on uncertainty, forecasting, and energy systems, so the list stays chronological to make that shift legible." data-zh="近年的论文逐渐收束到编译基础设施、稀疏推理与 AI 系统；更早的工作则在不确定性、预测与能源系统之间展开。这里仍按时间顺序排列，让研究重心如何迁移一目了然。">Recent papers center on compiler infrastructure, sparse inference, and AI systems. Earlier work focused on uncertainty, forecasting, and energy systems, so the list stays chronological to make that shift legible.</p>
-        <div class="reference-timeline reference-timeline--dense reference-publication-list">
-          <article>
-            <div class="reference-stamp">2026</div>
-            <div class="reference-entry">
-              <h3>SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping</h3>
-              <p class="reference-citation">Qiqi Gu, Chenpeng Wu, Heng Shi, Jianguo Yao. PPoPP 2026.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3774934.3786414">DOI</a>
+            <article class="project-card">
+              <a class="project-figure" href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">
+                <img
+                  src="./assets/projects/rust-serving-og.png"
+                  alt="Rust serving stack project preview"
+                  data-en-alt="Rust serving stack project preview"
+                  data-zh-alt="Rust 推理栈项目预览图"
+                />
+              </a>
+              <div class="project-caption">
+                <h5>Rust LLM Serving Stack on GCU</h5>
+                <p class="lang-en">
+                  A Rust-based serving stack around Candle and candle-vLLM on Enflame GCU, covering fused ops, quantization, multi-GCU inference, GGUF support, and memory-system work.
+                </p>
+                <p class="lang-zh" hidden>
+                  围绕 Candle 与 candle-vLLM 在 Enflame GCU 上构建的一整套 Rust 推理栈，涵盖融合算子、量化、多卡推理、GGUF 支持与内存系统优化。
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/EnflameTechnology/candle-gcu" target="_blank" rel="noreferrer noopener">candle-gcu</a>
+                  <a href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">candle-vllm-gcu</a>
+                  <a href="https://github.com/EricLBuehler/mistral.rs" target="_blank" rel="noreferrer noopener">mistral.rs</a>
+                </div>
               </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2025</div>
-            <div class="reference-entry">
-              <h3>Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores</h3>
-              <p class="reference-citation">Chenpeng Wu, Qiqi Gu, Heng Shi, Jianguo Yao, Haibing Guan. EuroSys 2025.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3689031.3717455">DOI</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2025</div>
-            <div class="reference-entry">
-              <h3>Postiz: Extending Post-increment Addressing for Loop Optimization and Code Size Reduction</h3>
-              <p class="reference-citation">Enming Fan, Xiaofeng Guan, Fan Hu, Heng Shi, Hao Zhou, Jianguo Yao. CGO 2025.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3696443.3708935">DOI</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2025</div>
-            <div class="reference-entry">
-              <h3>SPTCStencil: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swap</h3>
-              <p class="reference-citation">Qiqi Gu, Chenpeng Wu, Heng Shi, Jianguo Yao. arXiv 2025.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://arxiv.org/abs/2506.22035">arXiv</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024</div>
-            <div class="reference-entry">
-              <h3>Review of the opportunities and challenges to accelerate mass-scale application of smart grids with large-language models</h3>
-              <p class="reference-citation">Heng Shi, L Fang, X Chen, C Gu, K Ma, X Zhang, Z Zhang, J Gu, E. G. Lim. IET Smart Grid, 2024.</p>
-              <p class="reference-highlight" data-en="Highlight: Wiley Top Cited Article 2025." data-zh="亮点：Wiley 2025 年高被引论文。">Highlight: Wiley Top Cited Article 2025.</p>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024</div>
-            <div class="reference-entry">
-              <h3>UFront: Toward a Unified MLIR Frontend for Deep Learning</h3>
-              <p class="reference-citation">Guoqing Bao, Heng Shi, Chengyi Cui, Yalin Zhang, Jianguo Yao. ASE 2024.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3691620.3695002">DOI</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024</div>
-            <div class="reference-entry">
-              <h3>SPHINX: Search Space-Pruning Heterogeneous Task Scheduling for Deep Neural Networks</h3>
-              <p class="reference-citation">Bowen Yuchi, Heng Shi, Guoqing Bao. ICPP 2024.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3673038.3673155">DOI</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024</div>
-            <div class="reference-entry">
-              <h3>Boost Linear Algebra Computation Performance via Efficient VNNI Utilization</h3>
-              <p class="reference-citation">Hao Zhou, Qiukun Han, Heng Shi, Yalin Zhang, Jianguo Yao. ASPLOS 2024.</p>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://doi.org/10.1145/3620666.3651333">DOI</a>
-              </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2017</div>
-            <div class="reference-entry">
-              <h3>Deep Learning for household load forecasting-A novel pooling deep RNN</h3>
-              <p class="reference-citation">Heng Shi, Minghao Xu, Ran Li. IEEE Transactions on Smart Grid, 2017.</p>
-              <p class="reference-highlight" data-en="Google Scholar: 1,377 citations." data-zh="Google Scholar：累计 1377 次引用。">Google Scholar: 1,377 citations.</p>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2015</div>
-            <div class="reference-entry">
-              <h3>Demand Side Response Performance Assessment: An Impact Analysis of Load Profile Accuracy on DSR Performances</h3>
-              <p class="reference-citation">Chen Zhao, Heng Shi, Ran Li, Furong Li. IEEE PES General Meeting, 2015. Best Research Paper Award.</p>
-              <p class="reference-highlight" data-en="Highlight: Conference Best Paper." data-zh="亮点：会议最佳论文。">Highlight: Conference Best Paper.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+            </article>
+          </div>
+        </section>
 
-      <section class="reference-section reference-panel reference-panel--service">
-        <p class="reference-label" data-en="service & teaching" data-zh="服务与教学">service & teaching</p>
-        <div class="reference-timeline reference-timeline--dense">
-          <article>
-            <div class="reference-stamp" data-en="recent" data-zh="近期">recent</div>
-            <div class="reference-entry">
-              <h3 data-en="Upstream contributions, Mistral.rs / candle-vllm - GGUF support, memory allocation, and operator fusion" data-zh="在 mistral.rs 与 candle-vllm 的上游贡献，主要包括 GGUF 支持、内存分配优化与算子融合">Upstream contributions, Mistral.rs / candle-vllm - GGUF support, memory allocation, and operator fusion</h3>
-              <div class="reference-inline-links compact-inline-links">
-                <a href="https://github.com/EricLBuehler/mistral.rs">mistral.rs</a>
-                <a href="https://github.com/EricLBuehler/candle-vllm">candle-vllm</a>
+        <section class="docs-section docs-section--vitae" id="vitae">
+          <div class="section-row">
+            <h4><span class="lang-en">Vitae</span><span class="lang-zh" hidden>履历</span></h4>
+            <p class="section-note lang-en">Selected positions and education.</p>
+            <p class="section-note lang-zh" hidden>主要工作经历与教育背景。</p>
+          </div>
+          <ul class="vitae-timeline">
+            <li class="vitae-item">
+              <div class="vitae-card">
+                <div class="vitae-head">
+                  <span class="vitae-place">Enflame Tech</span>
+                  <span class="vitae-time">2022.12 - present</span>
+                </div>
+                <p class="vitae-role">Principal Engineer / Chief Researcher</p>
+                <p class="lang-en">
+                  Working on AI framework and systems research in the Research Academy, with a focus on compilers, runtimes, kernel programming models, and related research projects.
+                </p>
+                <p class="lang-zh" hidden>
+                  在燧原研究院从事 AI 框架与系统研究，主要围绕编译器、运行时、计算内核的编程抽象，以及相关项目的推进。
+                </p>
               </div>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp" data-en="recent" data-zh="近期">recent</div>
-            <div class="reference-entry">
-              <h3 data-en="Instructor, Shanghai IC Talent Training Program - computational paradigms and performance optimization" data-zh="上海集成电路紧缺人才培养项目授课导师：计算范式与性能优化">Instructor, Shanghai IC Talent Training Program - computational paradigms and performance optimization</h3>
-            </div>
-          </article>
-          <article data-link="https://www.sjtu.edu.cn/">
-            <div class="reference-stamp" data-en="recent" data-zh="近期">recent</div>
-            <div class="reference-entry">
-              <h3 data-en="Industry Mentor, Shanghai Jiao Tong University - Real-time Operating Systems course" data-zh="上海交通大学产业导师：《实时操作系统》研究生课程">Industry Mentor, Shanghai Jiao Tong University - Real-time Operating Systems course</h3>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024.12</div>
-            <div class="reference-entry">
-              <h3 data-en="Invited Speaker, CCAI 2024 - research on high-performance kernel programming DSLs" data-zh="中国人工智能大会 CCAI 2024 受邀报告：高性能计算内核编程 DSL 研究">Invited Speaker, CCAI 2024 - research on high-performance kernel programming DSLs</h3>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2024.03</div>
-            <div class="reference-entry">
-              <h3 data-en="Guest Editor, Electronics Special Issue - High-Performance Computing and Its Applications" data-zh="Electronics 专刊客座编辑：《高性能计算及其应用》">Guest Editor, Electronics Special Issue - High-Performance Computing and Its Applications</h3>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2023.12</div>
-            <div class="reference-entry">
-              <h3 data-en="Judge/Expert, 1st China Advanced Computing Contest - HPC Track A3" data-zh="中国第一届先进计算大赛评审专家：HPC Track A3">Judge/Expert, 1st China Advanced Computing Contest - HPC Track A3</h3>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2022.06 - now</div>
-            <div class="reference-entry">
-              <h3 data-en="Member, Shanghai Computer Society" data-zh="上海市计算机学会会员">Member, Shanghai Computer Society</h3>
-            </div>
-          </article>
-          <article data-link="https://mlcommons.org/benchmarks/">
-            <div class="reference-stamp">2019.2 - now</div>
-            <div class="reference-entry">
-              <h3 data-en="MLCommons | MLPerf, Company Representative - ResNet50, BERT-large, GPT-3 benchmarks; pre-silicon tiny model; training/inference rules" data-zh="MLCommons | MLPerf 公司代表：参与 ResNet50、BERT-large、GPT-3 等基准，pre-silicon tiny model，以及训练与推理规则">MLCommons | MLPerf, Company Representative - ResNet50, BERT-large, GPT-3 benchmarks; pre-silicon tiny model; training/inference rules</h3>
-            </div>
-          </article>
-          <article>
-            <div class="reference-stamp">2019.2 - now</div>
-            <div class="reference-entry">
-              <h3 data-en="AIIA Computing Architecture & Chip Group - benchmark revisions and CCSA AI chip standards" data-zh="AIIA 人工智能产业发展联盟芯片与架构组：参与基准修订与 CCSA AI 芯片标准">AIIA Computing Architecture & Chip Group - benchmark revisions and CCSA AI chip standards</h3>
-            </div>
-          </article>
-        </div>
-      </section>
+            </li>
+            <li class="vitae-item">
+              <div class="vitae-card">
+                <div class="vitae-head">
+                  <span class="vitae-place">Enflame Tech</span>
+                  <span class="vitae-time">2021.03 - 2022.12</span>
+                </div>
+                <p class="vitae-role">Software Architect</p>
+                <p class="lang-en">
+                  Led software architecture and technical planning across AI frameworks and system software, while also supporting technical evaluation and team building.
+                </p>
+                <p class="lang-zh" hidden>
+                  负责 AI 框架与系统软件的架构设计和技术规划，也参与团队建设与技术评估。
+                </p>
+              </div>
+            </li>
+            <li class="vitae-item">
+              <div class="vitae-card">
+                <div class="vitae-head">
+                  <span class="vitae-place">Enflame Tech</span>
+                  <span class="vitae-time">2020.02 - 2021.03</span>
+                </div>
+                <p class="vitae-role">Senior Algorithm Research Engineer</p>
+                <p class="lang-en">
+                  Worked on early-stage research across auto-parallelism, MLIR-related compiler work, benchmarking, and heterogeneous AI software systems.
+                </p>
+                <p class="lang-zh" hidden>
+                  参与自动并行、MLIR 编译基础设施、基准评测与异构 AI 软件系统等方向的前期研究。
+                </p>
+              </div>
+            </li>
+            <li class="vitae-item">
+              <div class="vitae-card">
+                <div class="vitae-head">
+                  <span class="vitae-place">University of Bath</span>
+                  <span class="vitae-time">2014.10 - 2018.07</span>
+                </div>
+                <p class="vitae-role">Ph.D. / Assistant Researcher</p>
+                <p class="lang-en">
+                  Doctoral work on smart grids, load forecasting, and energy systems, alongside research and project work at the University of Bath.
+                </p>
+                <p class="lang-zh" hidden>
+                  在巴斯大学读博期间，研究主要围绕智能电网、负荷预测与能源系统展开，同时参与相关科研与项目工作。
+                </p>
+              </div>
+            </li>
+            <li class="vitae-item">
+              <div class="vitae-card">
+                <div class="vitae-head">
+                  <span class="vitae-place">Tsinghua University</span>
+                  <span class="vitae-time">2009.08 - 2013.06</span>
+                </div>
+                <p class="vitae-role">B.Sc.</p>
+                <p class="lang-en">
+                  Undergraduate study in computer science, with early work touching nonlinear optimization and AGV swarm scheduling.
+                </p>
+                <p class="lang-zh" hidden>
+                  本科阶段在清华大学学习，早期工作涉及非线性优化与 AGV 集群调度。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-      <section class="reference-section reference-panel reference-panel--credentials">
-        <div class="reference-section-head">
-          <p class="reference-label" data-en="patents & awards" data-zh="专利与奖项">patents & awards</p>
-          <a class="reference-text-link" href="https://github.com/codes1gn/resume-hengshi" data-en="full CV source" data-zh="完整 CV 来源">full CV source</a>
-        </div>
-        <div class="reference-credentials-grid">
-          <section class="reference-subsection reference-subsection--patents">
-            <p class="reference-mini-label" data-en="patents" data-zh="专利">patents</p>
-            <p class="reference-subline" data-en="19 invention patents." data-zh="19 项发明专利。">19 invention patents.</p>
-            <div class="reference-timeline reference-timeline--mini reference-timeline--mini-wide">
-              <article>
-                <div class="reference-stamp">CN119806639A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Multiplication acceleration method, device, equipment, medium and product of double sparse matrix." data-zh="双稀疏矩阵的乘法加速方法、装置、设备、介质及产品。">Multiplication acceleration method, device, equipment, medium and product of double sparse matrix.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN119808861A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Storage optimization method, device, equipment, medium and product for mixed expert model." data-zh="混合专家模型的存储优化方法、装置、设备、介质及产品。">Storage optimization method, device, equipment, medium and product for mixed expert model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN119830976A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Operator optimization method, device, equipment, medium and program for hybrid expert model." data-zh="混合专家模型的算子优化方法、装置、设备、介质及程序。">Operator optimization method, device, equipment, medium and program for hybrid expert model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN119808860B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Optimization method, device, equipment, medium and program for mixed expert model." data-zh="混合专家模型的优化方法、装置、设备、介质及程序。">Optimization method, device, equipment, medium and program for mixed expert model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN119718484B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Cross-platform system of large model based on micro-operator." data-zh="一种基于微算子的大模型跨平台系统。">Cross-platform system of large model based on micro-operator.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN118657187A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Global optimization method, device, equipment and medium for reversible deep learning models." data-zh="深度学习模型可逆化的全局优化方法、装置、设备及介质。">Global optimization method, device, equipment and medium for reversible deep learning models.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN118364890B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Automatic reversible synthesis method, device, equipment and medium for deep learning model." data-zh="深度学习模型的自动可逆化合成方法、装置、设备及介质。">Automatic reversible synthesis method, device, equipment and medium for deep learning model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN118363542A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Dynamic storage management method, device, equipment and medium at task runtime." data-zh="任务运行时的动态存储管理方法、装置、设备及介质。">Dynamic storage management method, device, equipment and medium at task runtime.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN118364891B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Reversible structure identification method, device, equipment and medium in deep learning model." data-zh="深度学习模型中的可逆结构识别方法、装置、设备及介质。">Reversible structure identification method, device, equipment and medium in deep learning model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN118569346A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Non-invasive reversible conversion method, device, equipment and medium for deep learning model." data-zh="深度学习模型非侵入可逆化转换方法、装置、设备及介质。">Non-invasive reversible conversion method, device, equipment and medium for deep learning model.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN117273115A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Static reverse-computation-graph generation method, apparatus and medium." data-zh="一种反向计算图的静态生成方法、装置、设备及介质。">Static reverse-computation-graph generation method, apparatus and medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN117271101A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Operator fusion method, apparatus, electronic equipment and storage medium." data-zh="一种算子融合方法、装置、电子设备及存储介质。">Operator fusion method, apparatus, electronic equipment and storage medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN116560666B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Unified AI frontend computation method for multi-level code generation, apparatus and medium." data-zh="用于多层级代码生成的 AI 前端统一计算方法、装置及介质。">Unified AI frontend computation method for multi-level code generation, apparatus and medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN116149797A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Unified AI computation method for heterogeneous scenarios, apparatus, device and medium." data-zh="面向异构场景的 AI 统一计算方法、装置、设备及介质。">Unified AI computation method for heterogeneous scenarios, apparatus, device and medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN116166405B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Method and apparatus for determining neural-network task scheduling strategy in heterogeneous scenarios." data-zh="异构场景下的神经网络任务调度策略确定方法及装置。">Method and apparatus for determining neural-network task scheduling strategy in heterogeneous scenarios.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN115495095B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Whole-program compilation method for tensor programs, apparatus, device, medium and cluster." data-zh="张量程序的整程序编译方法、装置、设备、介质及集群。">Whole-program compilation method for tensor programs, apparatus, device, medium and cluster.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN113283613B</div>
-                <div class="reference-entry">
-                  <h3 data-en="Generation and optimization methods for deep-learning models, apparatus, device and medium." data-zh="深度学习模型的生成方法、优化方法、装置、设备及介质。">Generation and optimization methods for deep-learning models, apparatus, device and medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN112508190A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Processing method for structured-sparse parameters, apparatus, device and storage medium." data-zh="结构化稀疏参数的处理方法、装置、设备及存储介质。">Processing method for structured-sparse parameters, apparatus, device and storage medium.</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">CN112130807A</div>
-                <div class="reference-entry">
-                  <h3 data-en="Tensor floating-point data processing method, apparatus, device and storage medium." data-zh="张量浮点数据处理方法、装置、设备及存储介质。">Tensor floating-point data processing method, apparatus, device and storage medium.</h3>
-                </div>
-              </article>
-            </div>
-          </section>
-          <section class="reference-subsection reference-subsection--awards">
-            <p class="reference-mini-label" data-en="awards" data-zh="奖项">awards</p>
-            <p class="reference-subline" data-en="12 awards and recognitions." data-zh="12 项奖项与认可。">12 awards and recognitions.</p>
-            <div class="reference-timeline reference-timeline--mini">
-              <article>
-                <div class="reference-stamp" data-en="recent" data-zh="近期">recent</div>
-                <div class="reference-entry">
-                  <h3 data-en="O-DATAMAP research-impact recognition" data-zh="O-DATAMAP 研究影响力推荐">O-DATAMAP research-impact recognition</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2025</div>
-                <div class="reference-entry">
-                  <h3 data-en="Wiley Top Cited Article 2025, IET Smart Grid" data-zh="Wiley Top Cited Article 2025，IET Smart Grid">Wiley Top Cited Article 2025, IET Smart Grid</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2022</div>
-                <div class="reference-entry">
-                  <h3 data-en="Shanghai Rising Star of Science and Technology" data-zh="上海市启明星科技创新人才">Shanghai Rising Star of Science and Technology</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2020.12</div>
-                <div class="reference-entry">
-                  <h3 data-en="Enflame COO Award: Auto Model Parallelism" data-zh="燧原科技 COO Award：自动模型并行">Enflame COO Award: Auto Model Parallelism</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2020.09</div>
-                <div class="reference-entry">
-                  <h3 data-en="Enflame Value Creation Award: Structured Sparsity" data-zh="燧原科技价值创造 Award：结构化稀疏">Enflame Value Creation Award: Structured Sparsity</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2020.09</div>
-                <div class="reference-entry">
-                  <h3 data-en="Enflame Responsibility Award: Chip Correctness Fix" data-zh="燧原科技勇担职责 Award：最后批次芯片计算正确性修复">Enflame Responsibility Award: Chip Correctness Fix</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2019.12</div>
-                <div class="reference-entry">
-                  <h3 data-en="Enflame COO Award: Large-scale RL Convergence" data-zh="燧原科技 COO Award：大规模强化学习模型收敛">Enflame COO Award: Large-scale RL Convergence</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2017.05</div>
-                <div class="reference-entry">
-                  <h3 data-en="GEFCOM2017 Global Energy Forecasting Competition, TOP20" data-zh="GEFCOM2017 全球能源预测竞赛 TOP 20">GEFCOM2017 Global Energy Forecasting Competition, TOP20</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2016</div>
-                <div class="reference-entry">
-                  <h3 data-en="UK Solar &amp; Clean Energy Award, Best Project - SoLa Bristol" data-zh="英国太阳能与清洁能源奖，最佳项目大奖 - SoLa Bristol">UK Solar &amp; Clean Energy Award, Best Project - SoLa Bristol</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2015.07</div>
-                <div class="reference-entry">
-                  <h3 data-en="IEEE PES General Meeting Best Paper Award" data-zh="IEEE PES 智能电网通用会议最佳论文奖">IEEE PES General Meeting Best Paper Award</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2010.10</div>
-                <div class="reference-entry">
-                  <h3 data-en="National College Physics Competition, First Prize" data-zh="大学生物理竞赛全国一等奖">National College Physics Competition, First Prize</h3>
-                </div>
-              </article>
-              <article>
-                <div class="reference-stamp">2008.11</div>
-                <div class="reference-entry">
-                  <h3 data-en="National High School Physics Olympiad Final, First Prize TOP20" data-zh="全国高中物理奥林匹克竞赛全国总决赛一等奖 TOP 20">National High School Physics Olympiad Final, First Prize TOP20</h3>
-                </div>
-              </article>
-            </div>
-          </section>
-        </div>
-      </section>
+        <footer class="site-footer">
+          <p class="lang-en">This page is intentionally selective rather than exhaustive. For a fuller paper record, use the Google Scholar archive above.</p>
+          <p class="lang-zh" hidden>这个页面有意保持克制而不是穷尽式罗列；更完整的论文记录请查看上方的 Google Scholar 档案。</p>
+        </footer>
+      </div>
     </main>
-    <script src="./script.js?v=20260509"></script>
+    <script src="./script.js?v=20260509d"></script>
   </body>
 </html>
