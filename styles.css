@@ -3335,9 +3335,9 @@ html:lang(zh-CN) .reference-prose p {
   }
 
   .academic-shell {
-    width: min(100%, 800px);
+    width: min(100%, 1060px);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 28px;
   }
 
   .academic-shell--nav {

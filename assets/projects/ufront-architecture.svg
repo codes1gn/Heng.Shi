@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="350" viewBox="0 0 560 350" font-family="'Inter','Segoe UI','Helvetica Neue',sans-serif">
+  <defs>
+    <linearGradient id="ubg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="ustage1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="ustage2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="ufw" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="uout" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="ushadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000022"/>
+    </filter>
+    <marker id="uarrow" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#94a3b8"/>
+    </marker>
+    <marker id="uarrowW" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="350" rx="10" fill="url(#ubg)"/>
+
+  <text x="280" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">UFront: Unified MLIR Frontend</text>
+  <text x="280" y="38" text-anchor="middle" font-size="9" fill="#64748b">Two-Stage Compilation for Deep Learning (ASE 2024)</text>
+
+  <g filter="url(#ushadow)">
+    <rect x="30" y="50" width="100" height="28" rx="5" fill="url(#ufw)"/>
+    <text x="80" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">PyTorch</text>
+  </g>
+  <g filter="url(#ushadow)">
+    <rect x="145" y="50" width="100" height="28" rx="5" fill="url(#ufw)"/>
+    <text x="195" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">TensorFlow</text>
+  </g>
+  <g filter="url(#ushadow)">
+    <rect x="260" y="50" width="100" height="28" rx="5" fill="url(#ufw)"/>
+    <text x="310" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">ONNX</text>
+  </g>
+  <g filter="url(#ushadow)">
+    <rect x="375" y="50" width="100" height="28" rx="5" fill="url(#ufw)"/>
+    <text x="425" y="68" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">JAX / Other</text>
+  </g>
+
+  <g stroke="#94a3b8" stroke-width="1.2" fill="none" marker-end="url(#uarrow)">
+    <line x1="80" y1="78" x2="80" y2="96"/>
+    <line x1="195" y1="78" x2="195" y2="96"/>
+    <line x1="310" y1="78" x2="310" y2="96"/>
+    <line x1="425" y1="78" x2="425" y2="96"/>
+  </g>
+
+  <g filter="url(#ushadow)">
+    <rect x="30" y="100" width="445" height="80" rx="7" fill="url(#ustage1)"/>
+    <text x="252" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Stage 1 &#x2014; High-Level Unification</text>
+    <text x="252" y="130" text-anchor="middle" font-size="8" fill="#c7d2fe">No MLIR passes required</text>
+
+    <rect x="46" y="138" width="110" height="32" rx="4" fill="#ffffff33" stroke="#ffffff55" stroke-width="0.8"/>
+    <text x="101" y="152" text-anchor="middle" font-size="9" font-weight="600" fill="#fff">Model Tracing</text>
+    <text x="101" y="163" text-anchor="middle" font-size="7.5" fill="#c7d2fe">Framework &#x2192; Ops</text>
+
+    <line x1="156" y1="154" x2="172" y2="154" stroke="#fff" stroke-width="1" marker-end="url(#uarrowW)"/>
+
+    <rect x="172" y="138" width="110" height="32" rx="4" fill="#ffffff33" stroke="#ffffff55" stroke-width="0.8"/>
+    <text x="227" y="152" text-anchor="middle" font-size="9" font-weight="600" fill="#fff">Op Fusion</text>
+    <text x="227" y="163" text-anchor="middle" font-size="7.5" fill="#c7d2fe">Fold + Fuse</text>
+
+    <line x1="282" y1="154" x2="298" y2="154" stroke="#fff" stroke-width="1" marker-end="url(#uarrowW)"/>
+
+    <rect x="298" y="138" width="110" height="32" rx="4" fill="#ffffff33" stroke="#ffffff55" stroke-width="0.8"/>
+    <text x="353" y="152" text-anchor="middle" font-size="9" font-weight="600" fill="#fff">Unified IR</text>
+    <text x="353" y="163" text-anchor="middle" font-size="7.5" fill="#c7d2fe">Common DNN Ops</text>
+  </g>
+
+  <line x1="252" y1="180" x2="252" y2="200" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#uarrow)"/>
+  <text x="288" y="194" font-size="7.5" fill="#64748b">High-level IR</text>
+
+  <g filter="url(#ushadow)">
+    <rect x="30" y="205" width="445" height="70" rx="7" fill="url(#ustage2)"/>
+    <text x="252" y="223" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Stage 2 &#x2014; MLIR Lowering</text>
+    <text x="252" y="235" text-anchor="middle" font-size="8" fill="#bae6fd">Direct lowering patterns, no redundant passes</text>
+
+    <rect x="86" y="244" width="120" height="24" rx="4" fill="#ffffff33" stroke="#ffffff55" stroke-width="0.8"/>
+    <text x="146" y="260" text-anchor="middle" font-size="9" font-weight="600" fill="#fff">Lowering Patterns</text>
+
+    <line x1="206" y1="256" x2="226" y2="256" stroke="#fff" stroke-width="1" marker-end="url(#uarrowW)"/>
+
+    <rect x="226" y="244" width="120" height="24" rx="4" fill="#ffffff33" stroke="#ffffff55" stroke-width="0.8"/>
+    <text x="286" y="260" text-anchor="middle" font-size="9" font-weight="600" fill="#fff">TOSA IR (Standard)</text>
+  </g>
+
+  <line x1="252" y1="275" x2="252" y2="298" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#uarrow)"/>
+
+  <g filter="url(#ushadow)">
+    <rect x="80" y="303" width="130" height="28" rx="5" fill="url(#uout)"/>
+    <text x="145" y="321" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">IREE Backend</text>
+  </g>
+  <g filter="url(#ushadow)">
+    <rect x="240" y="303" width="130" height="28" rx="5" fill="url(#uout)"/>
+    <text x="305" y="321" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Custom Backend</text>
+  </g>
+
+  <rect x="490" y="100" width="56" height="80" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/>
+  <text x="518" y="124" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">Faster</text>
+  <text x="518" y="134" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">Compile</text>
+  <text x="518" y="152" text-anchor="middle" font-size="18" fill="#4f46e5">&#x2191;</text>
+  <text x="518" y="168" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">Efficient</text>
+
+  <rect x="490" y="205" width="56" height="70" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8"/>
+  <text x="518" y="228" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">Backend</text>
+  <text x="518" y="238" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">Compatible</text>
+  <text x="518" y="255" text-anchor="middle" font-size="18" fill="#0284c7">&#x2713;</text>
+  <text x="518" y="270" text-anchor="middle" font-size="7" font-weight="600" fill="#475569">No Fragm.</text>
+</svg>
