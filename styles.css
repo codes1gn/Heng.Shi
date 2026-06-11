@@ -3441,8 +3441,18 @@ html:lang(zh-CN) .reference-prose p {
   .section-link,
   .project-links a,
   .publication-links a {
-    color: #476683;
+    color: #2a5fa8;
     text-decoration: none;
+    border-bottom: 1px solid rgba(42, 95, 168, 0.28);
+    transition: color 160ms ease, border-color 160ms ease;
+  }
+
+  .body-link:hover,
+  .section-link:hover,
+  .project-links a:hover,
+  .publication-links a:hover {
+    color: #1a4580;
+    border-bottom-color: rgba(26, 69, 128, 0.56);
   }
 
   .profile-icon-link {
@@ -3452,6 +3462,7 @@ html:lang(zh-CN) .reference-prose p {
     width: 22px;
     height: 22px;
     color: #4d6782;
+    border-bottom: none;
   }
 
   .profile-icon-link svg {
@@ -3465,13 +3476,13 @@ html:lang(zh-CN) .reference-prose p {
   }
 
   .profile-icon-link:hover,
-  .body-link:hover,
-  .section-link:hover,
-  .project-links a:hover,
-  .publication-links a:hover,
   .site-nav a:hover,
   .site-nav a.is-active {
     color: #2f5378;
+  }
+
+  .profile-icon-link:hover {
+    border-bottom: none;
   }
 
   .site-nav {
