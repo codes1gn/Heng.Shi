@@ -175,13 +175,14 @@
             2018 to 2022, and has led research work as Principal Engineer / Chief Researcher since 2022,
             focusing on AI system stacks, performance optimization, and tooling design. He has published
             over 20 papers and received more than 1800 citations overall, with work presented at venues
-            including EuroSys, PPoPP, CGO, and ASE. His recent public work includes the CroqTile language and toolchain,
-            Samoyeds at EuroSys 2025, SPIDER at PPoPP 2026, and related work on AI compilers, sparse
+            including SC, ATC, EuroSys, PPoPP, CGO, and ASE. His recent public work includes the CroqTile language and toolchain,
+            structured sparse GEMM and AI-native kernel tuning at SC 2026 and ATC 2026, Samoyeds at EuroSys 2025,
+            SPIDER at PPoPP 2026, and related work on AI compilers, sparse
             acceleration, and systems for LLM serving. Earlier work spans forecasting and energy systems,
             while related community-facing efforts include participation in MLCommons / MLPerf and AIIA.
           </p>
           <p class="lang-zh" hidden>
-            石恒曾于 2018 年至 2022 年在燧原科技担任资深算法工程师、软件架构师，自 2022 年起担任主任工程师 / 首席研究员并开始带领研究团队，主要围绕 AI 系统栈的性能优化与工具链设计展开工作。他已累计发表论文 20 余篇，总引用超过 1800 次，相关工作发表于多个人工智能与计算机系统方向的重要会议。近年的公开工作包括 CroqTile 语言与工具链、EuroSys 2025 的 Samoyeds、PPoPP 2026 的 SPIDER，以及围绕 AI 编译器、稀疏加速与大模型服务系统的相关研究；更早期的工作则覆盖预测与能源系统方向，同时也参与了 MLCommons / MLPerf 和 AIIA 的相关社区工作。
+            石恒曾于 2018 年至 2022 年在燧原科技担任资深算法工程师、软件架构师，自 2022 年起担任主任工程师 / 首席研究员并开始带领研究团队，主要围绕 AI 系统栈的性能优化与工具链设计展开工作。他已累计发表论文 20 余篇，总引用超过 1800 次，相关工作发表于多个人工智能与计算机系统方向的重要会议。近年的公开工作包括 CroqTile 语言与工具链、SC 2026 与 ATC 2026 上的结构化稀疏 GEMM 与 AI 原生 Kernel 调优、EuroSys 2025 的 Samoyeds、PPoPP 2026 的 SPIDER，以及围绕 AI 编译器、稀疏加速与大模型服务系统的相关研究；更早期的工作则覆盖预测与能源系统方向，同时也参与了 MLCommons / MLPerf 和 AIIA 的相关社区工作。
           </p>
         </section>
 
@@ -192,6 +193,39 @@
             <p class="section-note lang-zh" hidden>这里只保留公开可验证的近况条目，不做完整罗列。</p>
           </div>
           <ul class="news-list">
+            <li class="news-item">
+              <div class="news-date">2026.10</div>
+              <div>
+                <p class="lang-en">
+                  Five papers were accepted: two at SC 2026, including a Best Paper Nomination for
+                  <a class="body-link" href="https://arxiv.org/abs/2603.00477" target="_blank" rel="noreferrer noopener">Do We Need Tensor Cores for Stencil Computations?</a>;
+                  two at ATC 2026, including A Novel AI-Native GPU Kernel Programming Language for Autonomous Kernel Tuning;
+                  and one at CGO 2027 on signal-aware liveness analysis for warp-specialized kernels.
+                </p>
+                <p class="lang-zh" hidden>
+                  五篇论文被接收：SC 2026 两篇，其中
+                  <a class="body-link" href="https://arxiv.org/abs/2603.00477" target="_blank" rel="noreferrer noopener">Do We Need Tensor Cores for Stencil Computations?</a>
+                  获最佳论文提名；ATC 2026 两篇，包括 A Novel AI-Native GPU Kernel Programming Language for Autonomous Kernel Tuning；
+                  另有 CGO 2027 一篇，研究面向 Warp 特化内核的信号感知活性分析。
+                </p>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-date">2026.10</div>
+              <div>
+                <p class="lang-en">
+                  <a class="body-link" href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">Piano</a>,
+                  a programmable AI agent workflow orchestrator built around a YAML workflow DSL, is now public.
+                  It composes agents, tools, approvals, loops, and parallel branches, and keeps every run
+                  inspectable, resumable, and evaluable.
+                </p>
+                <p class="lang-zh" hidden>
+                  可编程的 AI Agent 工作流编排器
+                  <a class="body-link" href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">Piano</a>
+                  现已公开：它以 YAML 工作流 DSL 组合 Agent、工具、审批、循环与并行分支，并让每次运行都可检查、可恢复、可评估。
+                </p>
+              </div>
+            </li>
             <li class="news-item">
               <div class="news-date">2026.04</div>
               <div>
@@ -361,18 +395,48 @@
           </div>
           <div class="publication-list">
             <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2027</div>
+              <div class="publication-body">
+                <p class="publication-title">Signal-Aware Liveness Analysis for Shared Memory Optimization in Warp-Specialized GPU Kernels</p>
+                <p class="publication-meta">Sijie Wu et al. CGO 2027.</p>
+                <div class="publication-links"><a href="https://doi.org/10.5281/zenodo.23254218" target="_blank" rel="noreferrer noopener">Artifact</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">Pushing the Limits of Structured Sparse GEMM on Hopper GPUs via Analytical Modeling</p>
+                <p class="publication-meta">Heng Shi, Qiqi Gu, Chenpeng Wu, Xiaofeng Guan, Sijie Wu, Enming Fan, Guoqing Bao, Jianguo Yao. SC 2026.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">Do We Need Tensor Cores for Stencil Computations?</p>
+                <p class="publication-meta">Q Gu, C Wu, H Shi, J Yao, H Guan. SC 2026. Best Paper Nomination.</p>
+                <div class="publication-links"><a href="https://arxiv.org/abs/2603.00477" target="_blank" rel="noreferrer noopener">arXiv</a></div>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">A Novel AI-Native GPU Kernel Programming Language for Autonomous Kernel Tuning</p>
+                <p class="publication-meta">Heng Shi, Xiaofeng Guan, Sijie Wu, Enming Fan, Chenpeng Wu, Qiqi Gu, Jiahang Xie, Guoqing Bao, Jianguo Yao. ATC 2026.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
+              <div class="publication-year">2026</div>
+              <div class="publication-body">
+                <p class="publication-title">SptcAttn: Accelerating Long-Context Attention with Diagonal Stripes using Sparse Tensor Core</p>
+                <p class="publication-meta">Chenpeng Wu, Qiqi Gu, Heng Shi, Jianguo Yao, Haibing Guan. ATC 2026.</p>
+              </div>
+            </article>
+            <article class="publication-item" data-publication-groups="selected all ai">
               <div class="publication-year">2026</div>
               <div class="publication-body">
                 <p class="publication-title">SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping</p>
                 <p class="publication-meta">Qiqi Gu, Chenpeng Wu, Heng Shi, Jianguo Yao. PPoPP 2026.</p>
                 <div class="publication-links"><a href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">DOI</a></div>
-              </div>
-            </article>
-            <article class="publication-item" data-publication-groups="all ai">
-              <div class="publication-year">2026</div>
-              <div class="publication-body">
-                <p class="publication-title">Do We Need Tensor Cores for Stencil Computations?</p>
-                <p class="publication-meta">Q Gu, C Wu, H Shi, J Yao, H Guan. arXiv preprint arXiv:2603.00477, 2026.</p>
               </div>
             </article>
             <article class="publication-item" data-publication-groups="selected all ai">
@@ -558,6 +622,29 @@
             <p class="section-note lang-zh" hidden>近年的代表性系统与研究工件。</p>
           </div>
           <div class="projects-grid">
+            <article class="project-card">
+              <a class="project-figure" href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">
+                <img
+                  src="./assets/projects/piano-workflow.svg"
+                  alt="Piano workflow graph from YAML to agent stages and run artifacts"
+                  data-en-alt="Piano workflow graph from YAML to agent stages and run artifacts"
+                  data-zh-alt="Piano 从 YAML 到 Agent 阶段与运行工件的工作流图"
+                />
+              </a>
+              <div class="project-caption">
+                <h5>Piano</h5>
+                <p class="lang-en">
+                  A programmable AI agent workflow orchestrator: a YAML DSL for composing agents, tools, approvals, loops, and parallel branches, with inspectable, resumable, and evaluable runs across multiple harnesses.
+                </p>
+                <p class="lang-zh" hidden>
+                  可编程的 AI Agent 工作流编排器：用 YAML DSL 组合 Agent、工具、审批、循环与并行分支，支持多种 harness，并让每次运行都可检查、可恢复、可评估。
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">Code</a>
+                </div>
+              </div>
+            </article>
+
             <article class="project-card">
               <a class="project-figure" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">
                 <img

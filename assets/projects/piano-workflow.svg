@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="350" viewBox="0 0 560 350" font-family="'Inter','Segoe UI','Helvetica Neue',sans-serif">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="pnode" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="pstage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="pout" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="pshadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000022"/>
+    </filter>
+    <marker id="parrow" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="350" rx="10" fill="url(#pbg)"/>
+
+  <text x="280" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Piano: Programmable Agent Workflows</text>
+  <text x="280" y="40" text-anchor="middle" font-size="9" fill="#64748b">YAML workflow DSL → agent DAG → inspectable, resumable runs</text>
+
+  <g filter="url(#pshadow)">
+    <rect x="20" y="60" width="164" height="258" rx="7" fill="#ffffff" stroke="#dbe3ec"/>
+  </g>
+  <text x="32" y="78" font-size="9" font-weight="700" fill="#1e293b">workflow.yaml</text>
+  <rect x="20" y="86" width="164" height="1" fill="#e2e8f0"/>
+  <g font-family="'SFMono-Regular','Consolas',monospace" font-size="8" fill="#475569">
+    <text x="32" y="104">name: kernel-tuning</text>
+    <text x="32" y="120">stages:</text>
+    <text x="40" y="136">- plan:</text>
+    <text x="48" y="150">harness: pi</text>
+    <text x="40" y="166">- map: tune</text>
+    <text x="48" y="180">count: 8</text>
+    <text x="40" y="196">- review:</text>
+    <text x="48" y="210">approval: true</text>
+    <text x="40" y="226">- report:</text>
+    <text x="48" y="240">eval: true</text>
+  </g>
+  <text x="32" y="272" font-size="8" fill="#94a3b8">agents · tools · loops</text>
+  <text x="32" y="286" font-size="8" fill="#94a3b8">approvals · parallel lanes</text>
+  <text x="32" y="300" font-size="8" fill="#94a3b8">resume · evals</text>
+
+  <g filter="url(#pshadow)">
+    <rect x="210" y="72" width="86" height="30" rx="6" fill="url(#pnode)"/>
+    <rect x="210" y="132" width="86" height="30" rx="6" fill="url(#pstage)"/>
+    <rect x="306" y="132" width="86" height="30" rx="6" fill="url(#pstage)"/>
+    <rect x="258" y="192" width="86" height="30" rx="6" fill="url(#pnode)"/>
+    <rect x="258" y="252" width="86" height="30" rx="6" fill="url(#pout)"/>
+  </g>
+  <text x="253" y="91" text-anchor="middle" font-size="9" fill="#ffffff">plan</text>
+  <text x="253" y="151" text-anchor="middle" font-size="9" fill="#ffffff">tune lane 1</text>
+  <text x="349" y="151" text-anchor="middle" font-size="9" fill="#ffffff">tune lane 2</text>
+  <text x="301" y="122" text-anchor="middle" font-size="8" fill="#64748b">parallel × 8</text>
+  <text x="301" y="211" text-anchor="middle" font-size="9" fill="#ffffff">review</text>
+  <text x="301" y="271" text-anchor="middle" font-size="9" fill="#ffffff">evidence</text>
+
+  <path d="M253 102 V132" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#parrow)"/>
+  <path d="M253 112 H349 V132" fill="none" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#parrow)"/>
+  <path d="M253 162 L290 192" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#parrow)"/>
+  <path d="M349 162 L312 192" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#parrow)"/>
+  <path d="M301 222 V252" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#parrow)"/>
+
+  <g filter="url(#pshadow)">
+    <rect x="414" y="60" width="126" height="258" rx="7" fill="#ffffff" stroke="#dbe3ec"/>
+  </g>
+  <text x="426" y="78" font-size="9" font-weight="700" fill="#1e293b">run artifacts</text>
+  <rect x="414" y="86" width="126" height="1" fill="#e2e8f0"/>
+  <g font-size="8" fill="#475569">
+    <text x="426" y="106">trajectory</text>
+    <text x="426" y="124">transcripts</text>
+    <text x="426" y="142">status.json</text>
+    <text x="426" y="160">resume state</text>
+    <text x="426" y="178">eval report</text>
+    <text x="426" y="196">usage / cost</text>
+  </g>
+  <g font-size="7.5" fill="#94a3b8">
+    <text x="426" y="228">inspect</text>
+    <text x="426" y="244">resume</text>
+    <text x="426" y="260">evaluate</text>
+  </g>
+  <circle cx="421" cy="225" r="2" fill="#10b981"/>
+  <circle cx="421" cy="241" r="2" fill="#10b981"/>
+  <circle cx="421" cy="257" r="2" fill="#10b981"/>
+
+  <text x="280" y="338" text-anchor="middle" font-size="8" fill="#64748b">one YAML graph → many agent harnesses → durable evidence</text>
+</svg>
