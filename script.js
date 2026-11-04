@@ -2,7 +2,9 @@ const themeToggles = Array.from(document.querySelectorAll('[data-theme-toggle]')
 const themeLabels = Array.from(document.querySelectorAll('[data-theme-label]'));
 const languageToggles = Array.from(document.querySelectorAll('[data-language-toggle]'));
 const languageLabels = Array.from(document.querySelectorAll('[data-language-label]'));
-const sectionLinks = Array.from(document.querySelectorAll('[data-section-link]'));
+const viewLinks = Array.from(document.querySelectorAll('[data-view-link]'));
+const viewSections = Array.from(document.querySelectorAll('.docs-section[data-view]'));
+const defaultView = 'home';
 const root = document.body;
 const storageKey = 'albert-shi-theme';
 const languageStorageKey = 'albert-shi-language';
@@ -56,24 +58,31 @@ function applyLanguage(language) {
   });
 }
 
-function updateActiveSection() {
-  if (!sectionLinks.length) {
-    return;
-  }
+function currentView() {
+  const requested = window.location.hash.replace(/^#/, '');
+  return viewSections.some((section) => section.dataset.view === requested)
+    ? requested
+    : defaultView;
+}
 
-  const threshold = window.scrollY + 140;
-  let activeHref = sectionLinks[0].getAttribute('href');
+function applyView(view, scrollToTop) {
+  viewSections.forEach((section) => {
+    section.hidden = section.dataset.view !== view;
+  });
 
-  sectionLinks.forEach((link) => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target && target.offsetTop <= threshold) {
-      activeHref = link.getAttribute('href');
+  viewLinks.forEach((link) => {
+    const isActive = link.getAttribute('href') === `#${view}`;
+    link.classList.toggle('is-active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
     }
   });
 
-  sectionLinks.forEach((link) => {
-    link.classList.toggle('is-active', link.getAttribute('href') === activeHref);
-  });
+  if (scrollToTop) {
+    window.scrollTo(0, 0);
+  }
 }
 
 function installImageFallbacks() {
@@ -155,7 +164,19 @@ languageToggles.forEach((toggle) => {
   });
 });
 
-window.addEventListener('scroll', updateActiveSection, { passive: true });
-window.addEventListener('resize', updateActiveSection);
-window.addEventListener('load', updateActiveSection);
-updateActiveSection();
+function syncView(scrollToTop) {
+  applyView(currentView(), scrollToTop);
+}
+
+window.addEventListener('hashchange', () => syncView(true));
+window.addEventListener('load', () => syncView(true));
+
+viewLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (link.getAttribute('href') === `#${currentView()}`) {
+      window.scrollTo(0, 0);
+    }
+  });
+});
+
+syncView(true);

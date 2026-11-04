@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20260509d" />
+    <link rel="stylesheet" href="./styles.css?v=20261104a" />
   </head>
   <body class="academic-body" data-theme="light" data-language="en">
     <main>
@@ -101,15 +101,12 @@
       <nav class="site-nav" aria-label="Primary">
         <div class="academic-shell academic-shell--nav">
           <ul class="site-nav-list">
-            <li><a href="#about" data-section-link><span class="lang-en">About</span><span class="lang-zh" hidden>简介</span></a></li>
-            <li><a href="#bio" data-section-link><span class="lang-en">Bio</span><span class="lang-zh" hidden>自述</span></a></li>
-            <li><a href="#news" data-section-link><span class="lang-en">News</span><span class="lang-zh" hidden>近况</span></a></li>
-            <li><a href="#publications" data-section-link><span class="lang-en">Publications</span><span class="lang-zh" hidden>论文</span></a></li>
-            <li><a href="#projects" data-section-link><span class="lang-en">Projects</span><span class="lang-zh" hidden>项目</span></a></li>
-            <li><a href="#vitae" data-section-link><span class="lang-en">Vitae</span><span class="lang-zh" hidden>履历</span></a></li>
-            <li><a href="#awards" data-section-link><span class="lang-en">Awards</span><span class="lang-zh" hidden>奖项</span></a></li>
-            <li><a href="#patents" data-section-link><span class="lang-en">Patents</span><span class="lang-zh" hidden>专利</span></a></li>
-            <li><a href="#service" data-section-link><span class="lang-en">Service</span><span class="lang-zh" hidden>服务</span></a></li>
+            <li><a href="#home" data-view-link><span class="lang-en">Home</span><span class="lang-zh" hidden>首页</span></a></li>
+            <li><a href="#experience" data-view-link><span class="lang-en">Bio &amp; Experience</span><span class="lang-zh" hidden>自述与履历</span></a></li>
+            <li><a href="#projects" data-view-link><span class="lang-en">Projects</span><span class="lang-zh" hidden>项目</span></a></li>
+            <li><a href="#awards" data-view-link><span class="lang-en">Awards</span><span class="lang-zh" hidden>奖项</span></a></li>
+            <li><a href="#patents" data-view-link><span class="lang-en">Patents</span><span class="lang-zh" hidden>专利</span></a></li>
+            <li><a href="#service" data-view-link><span class="lang-en">Service</span><span class="lang-zh" hidden>服务</span></a></li>
             <li class="nav-utility">
               <button class="language-switch" type="button" data-language-toggle aria-pressed="false" aria-label="Switch language" title="Switch language">
                 <span data-language-label>中文</span>
@@ -120,7 +117,7 @@
       </nav>
 
       <div class="academic-shell">
-        <section class="docs-section" id="about">
+        <section class="docs-section" id="about" data-view="home">
           <h4><span class="lang-en">About</span><span class="lang-zh" hidden>简介</span></h4>
           <p class="lang-en">
             I am Chief AI Officer and Chief Researcher at
@@ -161,7 +158,7 @@
           </p>
         </section>
 
-        <section class="docs-section" id="bio">
+        <section class="docs-section" id="bio" data-view="experience">
           <h4><span class="lang-en">Bio</span><span class="lang-zh" hidden>自述</span></h4>
           <p class="lang-en">
             Dr. Heng Shi received his Ph.D. from the University of Bath, after undergraduate study in
@@ -186,193 +183,7 @@
           </p>
         </section>
 
-        <section class="docs-section" id="news">
-          <div class="section-row">
-            <h4><span class="lang-en">News</span><span class="lang-zh" hidden>近况</span></h4>
-            <p class="section-note lang-en">Selected public updates from releases, papers, and open project records.</p>
-            <p class="section-note lang-zh" hidden>这里只保留公开可验证的近况条目，不做完整罗列。</p>
-          </div>
-          <ul class="news-list">
-            <li class="news-item">
-              <div class="news-date">2026.10</div>
-              <div>
-                <p class="lang-en">
-                  Five papers were accepted: two at SC 2026, including a Best Paper Nomination for
-                  <a class="body-link" href="https://arxiv.org/abs/2603.00477" target="_blank" rel="noreferrer noopener">Do We Need Tensor Cores for Stencil Computations?</a>;
-                  two at ATC 2026, including A Novel AI-Native GPU Kernel Programming Language for Autonomous Kernel Tuning;
-                  and one at CGO 2027 on signal-aware liveness analysis for warp-specialized kernels.
-                </p>
-                <p class="lang-zh" hidden>
-                  五篇论文被接收：SC 2026 两篇，其中
-                  <a class="body-link" href="https://arxiv.org/abs/2603.00477" target="_blank" rel="noreferrer noopener">Do We Need Tensor Cores for Stencil Computations?</a>
-                  获最佳论文提名；ATC 2026 两篇，包括 A Novel AI-Native GPU Kernel Programming Language for Autonomous Kernel Tuning；
-                  另有 CGO 2027 一篇，研究面向 Warp 特化内核的信号感知活性分析。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2026.10</div>
-              <div>
-                <p class="lang-en">
-                  <a class="body-link" href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">Piano</a>,
-                  a programmable AI agent workflow orchestrator built around a YAML workflow DSL, is now public.
-                  It composes agents, tools, approvals, loops, and parallel branches, and keeps every run
-                  inspectable, resumable, and evaluable.
-                </p>
-                <p class="lang-zh" hidden>
-                  可编程的 AI Agent 工作流编排器
-                  <a class="body-link" href="https://github.com/SyntaxArchmage/piano" target="_blank" rel="noreferrer noopener">Piano</a>
-                  现已公开：它以 YAML 工作流 DSL 组合 Agent、工具、审批、循环与并行分支，并让每次运行都可检查、可恢复、可评估。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2026.04</div>
-              <div>
-                <p class="lang-en">
-                  CroqTile
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.4-pre-beta/" target="_blank" rel="noreferrer noopener">v1.0.4 pre-beta</a>
-                  was posted on the official changelog, continuing the public rollout of the language and compiler toolchain.
-                </p>
-                <p class="lang-zh" hidden>
-                  CroqTile 官方更新日志发布了
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.4-pre-beta/" target="_blank" rel="noreferrer noopener">v1.0.4 pre-beta</a>，继续推进这套语言与编译工具链的公开演进。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2026</div>
-              <div>
-                <p class="lang-en">
-                  The public
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">CroqTile website</a>,
-                  <a class="body-link" href="https://github.com/LancerLab/croqtile" target="_blank" rel="noreferrer noopener">language repository</a>,
-                  and
-                  <a class="body-link" href="https://github.com/LancerLab/croqtile-tuner" target="_blank" rel="noreferrer noopener">tuner repository</a>
-                  continue to make the language and tooling stack inspectable in the open.
-                </p>
-                <p class="lang-zh" hidden>
-                  公开的
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/" target="_blank" rel="noreferrer noopener">CroqTile 网站</a>、
-                  <a class="body-link" href="https://github.com/LancerLab/croqtile" target="_blank" rel="noreferrer noopener">语言仓库</a>
-                  和
-                  <a class="body-link" href="https://github.com/LancerLab/croqtile-tuner" target="_blank" rel="noreferrer noopener">调优器仓库</a>
-                  持续让这套语言与工具链以可检查的方式对外开放。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2026</div>
-              <div>
-                <p class="lang-en">
-                  SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping was published at
-                  <a class="body-link" href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">PPoPP 2026</a>.
-                </p>
-                <p class="lang-zh" hidden>
-                  SPIDER: Unleashing Sparse Tensor Cores for Stencil Computation via Strided Swapping 发表在
-                  <a class="body-link" href="https://doi.org/10.1145/3774934.3786414" target="_blank" rel="noreferrer noopener">PPoPP 2026</a>。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2026.01</div>
-              <div>
-                <p class="lang-en">
-                  CroqTile
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.3-open-source/" target="_blank" rel="noreferrer noopener">v1.0.3 Open Source Base</a>
-                  marked the public open-source release of the base language stack.
-                </p>
-                <p class="lang-zh" hidden>
-                  CroqTile
-                  <a class="body-link" href="https://lancerlab.github.io/croqtile-website/en/changelog/v1.0.3-open-source/" target="_blank" rel="noreferrer noopener">v1.0.3 Open Source Base</a>
-                  完成了基础语言栈的公开开源发布。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2025</div>
-              <div>
-                <p class="lang-en">
-                  Samoyeds was published at
-                  <a class="body-link" href="https://doi.org/10.1145/3689031.3717455" target="_blank" rel="noreferrer noopener">EuroSys 2025</a>,
-                  presenting sparse-tensor-core acceleration for MoE models with structured sparsity.
-                </p>
-                <p class="lang-zh" hidden>
-                  Samoyeds 发表在
-                  <a class="body-link" href="https://doi.org/10.1145/3689031.3717455" target="_blank" rel="noreferrer noopener">EuroSys 2025</a>，聚焦利用结构化稀疏和 Sparse Tensor Core 加速 MoE 模型。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2025</div>
-              <div>
-                <p class="lang-en">
-                  Public repositories around
-                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-gcu" target="_blank" rel="noreferrer noopener">candle-gcu</a>
-                  and
-                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">candle-vllm-gcu</a>
-                  document ongoing Rust-based LLM serving work on Enflame GCU.
-                </p>
-                <p class="lang-zh" hidden>
-                  围绕
-                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-gcu" target="_blank" rel="noreferrer noopener">candle-gcu</a>
-                  和
-                  <a class="body-link" href="https://github.com/EnflameTechnology/candle-vllm-gcu" target="_blank" rel="noreferrer noopener">candle-vllm-gcu</a>
-                  的公开仓库，记录了基于 Rust 的 Enflame GCU 大模型服务系统持续推进情况。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2025</div>
-              <div>
-                <p class="lang-en">
-                  Postiz was published at
-                  <a class="body-link" href="https://doi.org/10.1145/3696443.3708935" target="_blank" rel="noreferrer noopener">CGO 2025</a>
-                  on post-increment addressing for loop optimization and code size reduction.
-                </p>
-                <p class="lang-zh" hidden>
-                  Postiz 发表在
-                  <a class="body-link" href="https://doi.org/10.1145/3696443.3708935" target="_blank" rel="noreferrer noopener">CGO 2025</a>，讨论后增量寻址在循环优化和代码尺寸压缩上的作用。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2024-2025</div>
-              <div>
-                <p class="lang-en">
-                  Continued participation in
-                  <span class="body-link">MLCommons / MLPerf</span>
-                  and
-                  <span class="body-link">AIIA</span>
-                  has kept part of the work connected to public benchmarking and industry-standard discussions.
-                </p>
-                <p class="lang-zh" hidden>
-                  持续参与
-                  <span class="body-link">MLCommons / MLPerf</span>
-                  与
-                  <span class="body-link">AIIA</span>
-                  相关工作，也让一部分研究和工程经验持续连接到公开评测与产业标准讨论中。
-                </p>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-date">2024</div>
-              <div>
-                <p class="lang-en">
-                  UFront appeared at
-                  <a class="body-link" href="https://doi.org/10.1145/3691620.3695002" target="_blank" rel="noreferrer noopener">ASE 2024</a>
-                  as a unified MLIR frontend effort for deep learning.
-                </p>
-                <p class="lang-zh" hidden>
-                  UFront 发表在
-                  <a class="body-link" href="https://doi.org/10.1145/3691620.3695002" target="_blank" rel="noreferrer noopener">ASE 2024</a>，目标是构建统一的深度学习 MLIR 前端。
-                </p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <section class="docs-section" id="publications">
+        <section class="docs-section" id="publications" data-view="home">
           <div class="section-row">
             <h4><span class="lang-en">Publications</span><span class="lang-zh" hidden>论文</span></h4>
             <a class="section-link" href="https://scholar.google.com/citations?user=THL_D54AAAAJ&hl=zh-CN" target="_blank" rel="noreferrer noopener">Google Scholar</a>
@@ -615,7 +426,7 @@
           </div>
         </section>
 
-        <section class="docs-section" id="projects">
+        <section class="docs-section" id="projects" data-view="projects">
           <div class="section-row">
             <h4><span class="lang-en">Projects</span><span class="lang-zh" hidden>项目</span></h4>
             <p class="section-note lang-en">Selected systems and research artifacts from recent years.</p>
@@ -745,7 +556,7 @@
           </div>
         </section>
 
-        <section class="docs-section docs-section--vitae" id="vitae">
+        <section class="docs-section docs-section--vitae" id="vitae" data-view="experience">
           <div class="section-row">
             <h4><span class="lang-en">Vitae</span><span class="lang-zh" hidden>履历</span></h4>
             <p class="section-note lang-en">Selected positions and education.</p>
@@ -860,7 +671,7 @@
           </ul>
         </section>
 
-        <section class="docs-section" id="awards">
+        <section class="docs-section" id="awards" data-view="awards">
           <div class="section-row">
             <h4><span class="lang-en">Awards</span><span class="lang-zh" hidden>奖项</span></h4>
             <p class="section-note lang-en">13 awards and recognitions.</p>
@@ -987,7 +798,7 @@
           </ul>
         </section>
 
-        <section class="docs-section" id="patents">
+        <section class="docs-section" id="patents" data-view="patents">
           <div class="section-row">
             <h4><span class="lang-en">Patents</span><span class="lang-zh" hidden>专利</span></h4>
             <p class="section-note lang-en">14 granted invention patents (8 as first inventor); 12 pending.</p>
@@ -1168,7 +979,7 @@
           </ul>
         </section>
 
-        <section class="docs-section" id="service">
+        <section class="docs-section" id="service" data-view="service">
           <div class="section-row">
             <h4><span class="lang-en">Service</span><span class="lang-zh" hidden>服务</span></h4>
             <p class="section-note lang-en">Teaching, editorial, and community activities.</p>
@@ -1281,6 +1092,6 @@
         </footer>
       </div>
     </main>
-    <script src="./script.js?v=20260509d"></script>
+    <script src="./script.js?v=20261104a"></script>
   </body>
 </html>

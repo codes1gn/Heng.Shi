@@ -3537,6 +3537,10 @@ html:lang(zh-CN) .reference-prose p {
     scroll-margin-top: 82px;
   }
 
+  .docs-section[hidden] {
+    display: none;
+  }
+
   .docs-section--vitae {
     padding-bottom: 40px;
   }
@@ -3563,45 +3567,12 @@ html:lang(zh-CN) .reference-prose p {
     font-size: 0.86rem;
   }
 
-  .news-list,
   .vitae-timeline {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .news-list {
-    max-height: 420px;
-    overflow-y: auto;
-    padding-right: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: #c3ccd7 transparent;
-  }
-
-  .news-list::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .news-list::-webkit-scrollbar-thumb {
-    background: #c3ccd7;
-  }
-
-  .news-list::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .news-item {
-    display: grid;
-    grid-template-columns: 88px minmax(0, 1fr);
-    gap: 14px;
-    padding: 8px 0;
-  }
-
-  .news-item + .news-item {
-    border-top: 1px solid #f1f2f4;
-  }
-
-  .news-date,
   .publication-year,
   .vitae-time {
     color: #6a7280;
@@ -3799,7 +3770,6 @@ html:lang(zh-CN) .reference-prose p {
     }
 
     .site-header-grid,
-    .news-item,
     .publication-item,
     .projects-grid {
       grid-template-columns: 1fr;
@@ -3829,11 +3799,6 @@ html:lang(zh-CN) .reference-prose p {
 
     .section-note {
       margin-top: 6px;
-    }
-
-    .news-list {
-      max-height: 460px;
-      padding-right: 6px;
     }
 
     .publication-tabs {
