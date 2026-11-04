@@ -3517,6 +3517,12 @@ html:lang(zh-CN) .reference-prose p {
   .site-nav a {
     text-decoration: none;
     color: #222222;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+  }
+
+  .site-nav a.is-active {
+    border-bottom-color: #2f5378;
   }
 
   .nav-utility {

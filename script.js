@@ -179,4 +179,8 @@ viewLinks.forEach((link) => {
   });
 });
 
+if (!viewSections.some((section) => `#${section.dataset.view}` === window.location.hash)) {
+  history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${defaultView}`);
+}
+
 syncView(true);
